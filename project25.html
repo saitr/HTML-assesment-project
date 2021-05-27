@@ -1,0 +1,545 @@
+<html>
+<head>
+<title>COLLECTION OF PROJECTS</title>
+</head>
+<body>
+<table border="0" width="100%" bgcolor="skyblue" height="8%">
+<tr>
+<th width="20%"><font color="white" size="4"><a href="project123.html">PROJECT 1</a></font></th>
+<th width="20%"><font color="white" size="4"><a href="project23.html">PROJECT 2</a></font></th>
+<th width="20%"><font color="white" size="4"><a href="project24.html">PROJECT 3</a></font></th>
+<th width="20%"><font color="white" size="4"><a href="project25.html">PROJECT 4</a></font></th>
+</tr>
+</table>
+<form class = “search-form”>
+<input type = “text” placeholder = “search”>
+<button>search</button>
+</head>
+</form>
+</nav>
+2015 International Conference on Communication, Information & Computing Technology (ICCICT), Jan. 16-17, Mumbai, India
+A Novel Cloud Computing based Smart Farming
+System for Early Detection of Borer Insects in
+Tomatoes
+Sudhir Rao Rupanagudi, Ranjani B. S., Prathik
+Nagaraj, Varsha G Bhat
+WorldServe Education
+Bengaluru, India
+sudhir@worldserve.in
+Thippeswamy G
+Dept. of Computer Science Engineering
+BMS Institute of Technology
+Bengaluru, India
+varsha@worldserve.in
+Abstract—Every year farmers experience huge losses due to
+pest infestation in crops & this inturn impacts his livelihood. In
+this paper we discuss a novel approach to solve this problem by
+constantly monitoring crops using video processing, cloud
+computing and robotics. The paper concentrates in
+methodologies to detect pests in one of the most popular fruits in
+the world – the tomato. An insight into how the idea of the
+Internet of Things can also be conceptualized in this project has
+been elaborated.
+Keywords— borer insect; cloud computing; early pest detection;
+fruit detection; fruit plucking; fruit worm; growth stages; Internet
+of Things (IOT); smart farming; tomato detection; video processing
+I. INTRODUCTION
+For a progressively developing nation such as India,
+agriculture is one of the most important sources of income to
+the country [1]. It must be noted that agriculture alone
+constitutes almost 22% of the country’s Gross Domestic
+Product (GDP), which is indeed a significant number [2]. It is
+due to this fact, that governments of several developing
+countries set aside a large part of their fiscal budget for the
+growth, development and introducing scientific and
+technologically advanced methodologies for farming each year.
+In a farmer’s perspective, such initiatives would assist them in
+producing better yield and safeguarding their produce, thus
+improvising their lifestyles as well. However, even though
+such programmes exist, farmers continue to be plagued by
+three major areas of concern – inadequate water supply
+(irrigation), attack of crops by pests & insects and thirdly -
+failure in properly storing produce which in turn might be
+attacked by pests and rodents [3].
+Over the past few years, a lot of research has been carried
+out to overcome the aforementioned problems. Usage of cloud
+seeding techniques and construction of barrages or dams near
+villages have reduced the water crisis to some extent [4].
+Modern storage techniques which include utilizing rodent
+exterminators keep rodents at bay [5]. But when it comes to
+prevention of pests or insects from attacking crops, the usual
+practice is to spray incessant amounts of pesticides. Though
+effective this practice comes with its own set of disadvantages.
+Excessive use of pesticide can lead to irreparable damage to
+the environment. Being at the top end of the food chain, this
+would also create hazardous health issues to humans, including
+birth defects. With respect to farmers, direct contact to these
+chemicals often lead to skin diseases and prolonged use might
+lead to cancer [6].
+A solution to this issue, is by spraying pesticide on crops
+only when need required and also by eliminating those crops or
+fruits already affected by pests. This solution though simple,
+would require a constant monitoring by the farmer which
+would turn out to be infeasible due to various reasons such as
+the absence of the agriculturist at all points of time. Ill health
+of farmers might also constitute for his/her absence from the
+farm. Therefore, in order to address this major issue, we
+describe a novel, innovative and a fully automated method to
+perform a constant surveillance of the farm at all points of
+time, even in the absence of the farmer.
+The major concentration of this paper lies in identifying
+fruits of crops in their early unripe stages and also to monitor
+them for any disease or pest infestation. If in case any disease
+or pest activity is detected, such fruits could be immediately
+eliminated in turn preventing spreading of the same to other
+healthy crops. Pesticides, insecticides and also bio-control of
+pests [7] could be utilized for immediate elimination. For all
+experiments conducted, we utilized the Tomato plant (Solanum
+lycopersicum), since it is one of the most widely grown crops
+in the world [8]. Tomatoes commonly get affected, in their
+growing stages (unripe stages), by a pest known as the borer
+insect - Helicoverpa armigera [9], which is usually identified
+by a black color hole in the fruit through which it enters [10].
+In order to identify the same, a complete video processing
+application using Java was developed and was deployed using
+cloud computing which has been detailed further in this paper.
+The next section describes few other existing methods
+using real time video processing to identify unripe tomatoes.
+Section III of this paper discusses the setup used for our
+experimentation and also that deployed on the cloud. The
+complete video processing algorithm developed is elaborated
+in section IV along with the results obtained in section V.
+Section VI deals with the future scope of this research with
+some insights into further extensions.
+978-1-4799-5522-0/15/$31.00 ©2015 IEEE
+2015 International Conference on Communication, Information & Computing Technology (ICCICT), Jan. 16-17, Mumbai, India
+II. EXISTING METHODOLOGIES
+As of date, a lot of researchers have discussed new
+methodologies to detect fruits and vegetables on plants
+utilizing various techniques such as video processing and have
+also explained systems which can pluck or segregate the same.
+The first ever publication to discuss the same, was in the year
+1995 [11]. In this paper, the authors introduce a novel idea to
+identify tomatoes in plants using several visual sensors and
+also to pluck the same using suction cups attached to a robot.
+Unfortunately, no further explanation on how to achieve the
+same has been elaborated. In [12] a complete explanation of
+automatic tomato identification on plants using a normal laser
+and an infrared laser has been described. The system though
+accurate proves to be cost ineffective. [13] - [15] utilize image
+processing techniques and stereo cameras to detect tomatoes
+but involve complicated and time consuming algorithms such
+as principal component analysis and K-Means clustering,
+which slow down the complete process. Several other research
+works exist which deal with the detection of oranges [16],
+pomegranates [17] and the egg plant [18] but use techniques
+not applicable to this project. Several methodologies to identify
+tomatoes in controlled environments within industries on
+conveyor belts also exist [19]-[21], but cannot be utilized since
+these approaches do not address the problem of interference of
+leaves, stems and other environmental factors. It must also be
+noted that all the papers mentioned above deal solely with
+detection of ripe fruits in turn helping in harvesting, whilst our
+scope of research lies in the fact that detection has to be done at
+the unripe stages itself. Also, there is limited amount of
+discussions on detection of pests and more particularly the
+borer insect.
+The next section discusses the Setup used for our
+experimentation in detail. The setup described can be used in
+conjunction with the robot explained in [22].
+III. SETUP
+The initial setup basically consists of a camera which is
+mounted on a robotic car. The robotic car is designed such that
+it can move around the field, in the space between two rows of
+crops, with the camera capturing images or obtaining a live
+video feed of the crops. For the primary experiments
+conducted, we utilized an Intex 5.0 mega pixel web camera
+with an image resolution of 356x320 [23]. The camera was
+placed at a distance of 1.5 feet away from the tomato plants.
+The total frame rate of the same was 30 frames per second.
+This in turn was connected to a laptop on which the main video
+processing algorithm runs. Based on the decisions taken by the
+algorithm, a robotic arm or a spraying system could be
+designed to spray the necessary amount of pesticide on the
+tomatoes. Though this proved to be a highly speed efficient
+solution, the main disadvantage of this setup was the overall
+power consumed. Since the camera, motors of the robot and
+also the laptop have to be powered using a portable power
+supply, such a solution would prove to be arduous to the
+farmer, since a constant watch on the power levels of the
+battery has to be taken care of and frequent recharges become
+necessary.
+In order to take care of this issue and by doing so, reduce
+the power consumed by the system, it was inevitable to think
+of a solution wherein the processing – the most power hungry
+task of the system [24], could be performed elsewhere. In other
+words, create a system which could wirelessly communicate
+with the camera and the robot and perform the necessary
+processing on a remote server. Therefore, in order to achieve
+the above mentioned requirements we utilized concepts of
+cloud computing as part of our setup. An illustration of the
+setup in the field using a wireless web camera can be seen in
+Fig. 1.
+Fig. 1. Illustration of the setup using a wireless web camera
+According to the National Institute of Standards and
+Technology (NIST) [25], cloud computing is defined as a
+model which is capable of creating a universal, “everywhereavailable”,
+on-demand network access to a remotely located
+shareable pool of computer resources that can be utilized with
+minimal intervention of the end user. Any cloud computing
+setup utilizes three major service models which are found in
+our setup as well. The complete cloud computing solution for
+our system can be seen in Fig. 2, inclusive of the three major
+service model layers – The Software as a service (Saas), the
+Platform as a service (Paas) and the Infrastructure as a service
+(Iaas) [26]. The same has been elaborated below.
+A. Infrastructure as a service (Iaas)
+Infrastructure as a service basically defines the hardware or
+the processor on which the applications on the cloud would be
+executed. For all our experiments an Intel i3 32-bit core
+processor was utilized.
+B. Platform as a service (Paas)
+In order to deploy the application created on the hardware
+mentioned above, there is a necessity of a software operating
+system on which the development kit or the necessary libraries
+for the applications to work can be installed. In this case we
+utilized the Microsoft Azure software as the Paas.
+C. Software as a service (Saas)
+The software application developed and which is to be
+deployed on the Paas/Iaas is nothing but the Saas. In this case,
+the Java application responsible for detecting the unripe fruits
+and the borer insect using the wireless feed from the camera
+constitutes the Saas in our setup.
+2015 International Conference on Communication, Information & Computing Technology (ICCICT), Jan. 16-17, Mumbai, India
+Fig. 2. Cloud computer based architecture for smart farming
+The complete algorithm of the application developed has
+been elaborated in detail in the next section.
+IV. OUR METHODOLOGY
+As mentioned previously, a novel and a highly speed
+efficient video processing algorithm was developed using the
+Java programming language. Speed efficiency was necessary
+since decisions on whether to spray the pesticide or not has to
+be taken immediately and sent back to the robot from the
+cloud. The first phase of the algorithm deals with the actual
+unripe tomato detection on the plant and latter phase of the
+algorithm concentrates on finding the borer insect. The steps
+followed for the same have been shown in the flowchart in Fig
+3. and the explanation for the same has been described in detail
+below.
+A. Color conversion
+Each frame of the real time video feed obtained from the
+setup explained in the previous section is first subjected to
+color conversion. It must be noted, that the frames obtained are
+in Red, Green and Blue color scheme. Though it is of common
+notion that green tomatoes could be directly identified using
+the green color plane, it is not true. The main reason for the
+same is the dependency of the RGB color space on brightness
+[27]. Hence, if the brightness changes, the range of the RGB
+values representing the unripe tomato also changes, making it
+impossible to identify tomatoes under different brightness
+conditions. Therefore, in order to compensate for this effect,
+the frames obtained are first converted to a model known as the
+YCbCr model [28]. The conversions are guarded by equations
+(1)-(3) as defined by the ITU-R BT.601 [29] and have been
+given below.
+Y' = (0.299 × R) + (0.587 × G) + (0.114 × B) (1)
+Cb=0.16*R-0.33*G+0.500*B (2)
+Cr = 0.5*R - 0.418688*G - 0.081312*B (3)
+Fig. 3. Flowchart depicting the steps involved in our algorithm
+Where, Y represents the intensity, Cb represents the
+chroma blue color component –in other words blueness of the
+image devoid of brightness and Cr – the chroma red
+component in other words redness devoid of brightness. The
+color converted frames are then segmented using the Cb and Cr
+components alone, to obtain the region of interest. Another
+important advantage of color conversion in this case, is that the
+amount of memory required to store each pixel of the pictures
+reduces to only 16 bits as opposed to 24 bits which was used
+with the RGB model. This helps to reduce the overall memory
+requirement by 1/3rd.
+B. Segmentation of unripe tomatoes
+Segmentation, in image processing, is the task of
+segregating or separating the region of interest from the
+background. In this case, our region of interest is solely the
+unripe green tomatoes and the challenge lies in the fact that,
+this has to be segregated from a background mainly consisting
+of stems, leaves and other artefacts lying closely in the same
+range as that of the tomato.
+Several experiments were conducted on over 100 images of
+tomatoes, and it was found that green tomatoes have a distinct
+range of Cb and Cr which were obtained through histogram
+analysis. The histograms procured for the same have been
+shown in Fig. 4. Similar histograms were obtained for various
+images taken under varying environmental conditions.
+RGB to grayscale colour conversion
+Segmentation resulting in extraction
+of tomatoes, leaves, and branches
+Erosion is performed to eliminate
+leaves and branches
+Tomatoes are retained by performing
+dilation
+RGB image of tomatoes are retrieved
+back using dilated image as a mask
+Real time video feed from wireless
+webcam
+Phase
+2
+Phase
+1
+Identify the pest on the tomatoes
+Based on the number of pests spray
+adequate pesticide
+2015 International Conference on Communication, Information & Computing Technology (ICCICT), Jan. 16-17, Mumbai, India
+Fig. 4. Histograms of Cb and Cr of the tomato images with the ranges
+marked
+Utilizing these values, segmentation was performed in turn
+making the tomatoes black (0) and the background white (255).
+Assuming ?cr1 and ?cr2 are the ranges for the Cr components of
+the object of interest and ?cb1 and ?cb2 - the ranges for the Cb
+component, then the segmented image S obtained can be
+represented by (4).
+0, ?cr1>Cr> ?cr2 && ?cb1>Cb> ?cb2
+S(i,j) =
+255, otherwise (4)
+C. Noise Removal
+As with all segmentation techniques, one of the major
+issues faced after completion of the process, is the occurrence
+of noise. In this case, a few parts of the stem and leaves are
+picked up as part of the tomato and therefore it is necessary to
+eliminate the same.
+In this paper, noise removal was performed using a
+methodology known as Erosion. A structuring element of 3x3
+was applied on the resultant image ‘S’ obtained in the previous
+step. Upon completion of this process, most of the noise is
+obliterated but along with it comes a major disadvantage –
+erosion causes even the edges of the tomato to disappear.
+Therefore, in order to nullify this effect, we go in for the
+reverse process – dilation. Whilst erosion is a process of
+checking whether any surrounding pixel is black and then
+making the pixel under consideration black as well (if it is
+white), dilation on the other hand is quite the opposite [30].
+Hence on application of the dilation algorithm, we retain back
+the edges and the shape of the tomatoes to some extent. A
+structuring element of 13x13 was utilized for this process.
+D. Obtaining back the tomatoes in color
+After completing the above mentioned steps, we now
+require to regain back the tomatoes in color, so that further
+steps can be processed. In order to perform the same, we utilize
+the dilated image (D) obtained as a mask and logically “AND”
+the same with the RGB image (C) captured from the camera.
+By doing so, we now obtain only the tomatoes in color and the
+background remains black. This can be further represented by
+(5).
+ExtractedImage(i,j) = D(i,j) & C(i,j) (5)
+Once all these processes complete, phase 2 i.e. the
+identification of the borer insect on the tomatoes extracted,
+begins. This has been explained further in detail.
+E. Identification or segmentation of the borer insect
+The final phase of the experiment is to extract the borer
+insect, if present on the tomato. In order to perform the same,
+the color image obtained above (after masking) is now
+subjected to color conversion once again. Since borer insects
+are indicated by black color holes on the tomato, it is sufficient
+therefore to convert the color image to an intensity component
+(Y). This is due to the fact that, once histogram analysis is
+performed, the pixels belonging to the borer would always lie
+in the former end of the histogram. This can be seen in Fig. 5.
+Fig. 5. Histogram of the extracted tomato with borer insect
+Utilizing (4) and the new threshold values, successful
+extraction of the borer insect was possible. An erosion
+operation with a structuring element of size 3x3 and a dilation
+of structuring element size 7x7 was performed to retrieve the
+borer with perfection.
+A simple counting algorithm could now be initiated, to
+count the total number of borer insects affecting the fruit or an
+area calculation can also be performed to find the extent of
+destruction. The next section presents the results obtained for
+the algorithm explained in this section.
+V. RESULTS
+As mentioned in Section III, all algorithms were designed
+and developed using the Java programming language in
+2015 International Conference on Communication, Information & Computing Technology (ICCICT), Jan. 16-17, Mumbai, India
+conjunction with the Java Development Kit (JDK) 1.6 and Java
+Media Framework (JMF) 2.1. All programs were deployed as
+part of the Saas layer of the cloud computing standard on a 32-
+bit Windows system. Experimentation was conducted on over
+100 images of tomatoes (unripe) procured from actual farms
+and also from the internet.
+Fig. 6 shows an example of an unripe tomato picture taken
+1.5 feet away from the plant.
+Fig. 6. Unripe tomato picture taken 1.5 feet away
+It can be clearly seen that the top right most tomato has
+been affected by the borer insect whilst the bottom left few
+tomatoes are still intact. As explained in the previous section,
+the first step would be to convert the input image into the Cb
+and Cr components respectively. Fig. 7a and 7b depict the
+same.
+Fig. 7. Cb and Cr components of the Tomato picture procured
+The image obtained after applying the histogram based
+segmentation can be seen in Fig. 8.
+Fig. 8. Image obtained after histogram based segmentation
+As discussed earlier, there is an extreme amount of noise in
+the image. The results obtained after the erosion and dilation
+operation can be seen in Fig 9a and Fig. 9b respectively.
+The regions which contain the tomato can also be seen
+clearly. Once this process completes, the next step is to
+perform masking using the mask obtained after dilation.
+Fig. 9. Images obtained after erosion and dilation
+The resultant image obtained after masking can be seen in
+Fig. 10.
+Fig. 10. Image obtained after masking
+It can be clearly seen that the unripe tomatoes have been
+successfully extracted and the borer detection algorithm can be
+performed.
+Extraction of the borer follows the steps mentioned in the
+previous section. It can be visualized from Fig. 11, that the
+borer insect has been successfully detected. The non affected
+tomatoes have been completely ignored.
+Fig. 11. Borer insect successfully extracted from the tomato
+Further to this, a speed comparison i.e. a complete
+comparison of the execution time of our algorithm with that of
+the algorithms explained in [15] & [14] to detect green
+tomatoes, was performed and tabulated in Table I.
+TABLE I. COMPARISON OF TIMINGS OF THREE ALGORITHMS
+Name of Method Time taken in seconds
+Using K-Means Clustering [15] 0.794175
+Using PCA [14] 1.45955
+Our algorithm 0.46144
+It can be clearly seen from Table I that the algorithm
+designed and implemented in this paper takes a mere 0.46s in
+comparison with the other two well known algorithms which
+were used in [14] and [15]. This would in turn assist in a faster
+judgement of tomato borer infestation and action can be taken
+more quickly.
+2015 International Conference on Communication, Information & Computing Technology (ICCICT), Jan. 16-17, Mumbai, India
+VI. CONCLUSION
+In this paper a novel methodology to perform smart
+farming and also to detect the borer insect on tomato plants,
+has been described. The complete model implemented on a
+cloud computing framework was also elaborated. It can also be
+seen that the algorithm explained is 1.71 times faster than two
+other popular methods of unripe tomato detection. Based on
+the resultant obtained from the algorithms, a decision can be
+taken as to how much amount of pesticide should be sprayed.
+This prevents unnecessary spraying of pesticides as well as
+safeguarding the health of farmers, consumers and also the
+environment. Future versions of this implementation could
+include a unique IP address for the robot, in turn controlling the
+same via cloud computing or by a farmer elsewhere. In other
+words a complete “Internet of Things” approach can be
+utilized. Governments of various countries can adopt this
+design and provide respite to hundreds of farmers worldwide.
+REFERENCES
+[1] Huddar, S.R.; Gowri, S.; Keerthana, K.; Vasanthi, S.; Rupanagudi, S.R.,
+"Novel algorithm for segmentation and automatic identification of pests
+on plants using image processing," Computing Communication &
+Networking Technologies (ICCCNT), 2012 Third International
+Conference on , vol., no., pp.1,5, 26-28 July 2012
+[2] Ministry of Statistics and Programme Implementation, Press Note on
+Quarterly Estimates of Gross Domestic Product for the Third Quarter
+(October-December) of 2013-14, Government of India, February 2014.
+[3] The International Rice Research Institute, “Suphan Buri, Thailand, 1974
+and 1975,” in Constraints to High Yields on Asian Rice Farms: An
+Interim Report, Philippines, 1977, Ch 7, pp 255.
+[4] Mohana A. Krishnan, “The promise of cloud-seeding”, The Hindu, April
+13, 2014. [Online]. Available: http://www.thehindu.com/opinion/openpage/
+the-promise-of-cloudseeding/article5906186.ece [Accessed Sept.
+10, 2014].
+[5] Sahay, K.M.; Singh, K.K.; “Storage,” in Unit Operations of Agricultural
+Processing, Noida, India: Vikas Publishing House, 2004, Ch 4, pp 164-
+172.
+[6] World Health Organisation, Preventing Disease through Healthy
+Environments, Exposure to Highly Hazardous Pesticides: A Major
+Public Health Concern, Geneva, 2010.
+[7] Singh, A.; Parmar, N.; Kuhad, R.C; “Biological Control of Pests,” in
+Bioaugmentation, Biostimulation, Biocontrol, Springer Science &
+Business Media, 2011, Ch 10, pp 223-225.
+[8] Ghaffari, R.; et.al, "Early detection of diseases in tomato crops: An
+Electronic Nose and intelligent systems approach," Neural Networks
+(IJCNN), The 2010 International Joint Conference on , vol., no., pp.1,6,
+18-23 July 2010.
+[9] Peña, J. E.; “Biology, Ecology and Management of the South American
+Tomato Pinworm, Tuta absoluta,” in Potential Invasive Pests of
+Agricultural Crops, Volume 3 of CABI invasive species series, CABI,
+2013, Ch 6, sec 1, pp 98.
+[10] Missouri Botanical Garden, “Tomato Fruit Problems,” Last updated:
+April 2012.[Online]. Available:
+http://www.missouribotanicalgarden.org/gardens-gardening/yourgarden/
+help-for-the-home-gardener/advice-tips-resources/visualguides/
+tomato-fruit-problems.aspx. [Accessed Sept. 10, 2014].
+[11] Kondo, N.; Monta, M.; Fujiura, T.; Shibano, Y., "Intelligent Robot to
+Harvest Tomato," Robotics and Automation, 1995. Proceedings., 1995
+IEEE International Conference on , vol.3, no., pp.V19,, 21-27 May 1995
+[12] Gotou, K.; Fujiura, T.; Nishiura, Y.; Ikeda, H.; Dohi, M., "3-D vision
+system of tomato production robot," Advanced Intelligent Mechatronics,
+2003. AIM 2003. Proceedings. 2003 IEEE/ASME International
+Conference on , vol.2, no., pp.1210,1215 vol.2, 20-24 July 2003.
+[13] Yang, L.; Dickinson, J.; Wu, Q. M J; Lang, S., "A fruit recognition
+method for automatic harvesting," Mechatronics and Machine Vision in
+Practice, 2007. M2VIP 2007. 14th International Conference on , vol.,
+no., pp.152,157, 4-6 Dec. 2007.
+[14] Kundu, S.; Hazra, A; Deb, K.; Hazra, P., "Dimensionality reduction of
+morphological features of tomato leaves and fruiting
+habits," Communications, Devices and Intelligent Systems (CODIS),
+2012 International Conference on , vol., no., pp.608,611, 28-29 Dec.
+2012
+[15] Hongpeng Yin; Yi Chai; Yang, Simon X.; Mittal, G.S., "Ripe tomato
+extraction for a harvesting robotic system," Systems, Man and
+Cybernetics, 2009. SMC 2009. IEEE International Conference on , vol.,
+no., pp.2984,2989, 11-14 Oct. 2009
+[16] Cakir, Y.; Kirci, M.; Gunes, E.O.; Ustundag, B.B., "Detection of
+oranges in outdoor conditions," Agro-Geoinformatics (Agro-
+Geoinformatics), 2013 Second International Conference on , vol., no.,
+pp.500,503, 12-16 Aug. 2013
+[17] Akin, C.; Kirci, M.; Gunes, E.O.; Cakir, Y., "Detection of the
+pomegranate fruits on tree using image processing," Agro-
+Geoinformatics (Agro-Geoinformatics), 2012 First International
+Conference on , vol., no., pp.1,4, 2-4 Aug. 2012
+[18] Jian Song, "Target identification based on automatic threshold for
+eggplant picking robot," Information Science and Engineering (ICISE),
+2010 2nd International Conference on , vol., no., pp.1567,1569, 4-6 Dec.
+2010
+[19] Gejima, Y.; Houguo Zhang; Nagata, M., "Judgment on level of maturity
+for tomato quality using L*a*b* color image processing," Advanced
+Intelligent Mechatronics, 2003. AIM 2003. Proceedings. 2003
+IEEE/ASME International Conference on , vol.2, no., pp.1355,1359
+vol.2, 20-24 July 2003
+[20] Guo Feng; Cao Qixin, "Study on color image processing based
+intelligent fruit sorting system," Intelligent Control and Automation,
+2004. WCICA 2004. Fifth World Congress on , vol.6, no., pp.4802,4805
+Vol.6, 15-19 June 2004
+[21] D Amato, Juan Pablo; Garcia Bauza, Cristian; Boroni, Gustavo, "Color
+Based Fruits classification using GPU," Latin America Transactions,
+IEEE (Revista IEEE America Latina) , vol.9, no.3, pp.346,350, June
+2011
+[22] Nezhad, M.AK.B.; Massh, J.; Komleh, H.E., "Tomato Picking Machine
+Vision Using with the Open CV's Library," Machine Vision and Image
+Processing (MVIP), 2011 7th Iranian , vol., no., pp.1,5, 16-17 Nov. 2011
+[23] Intex Technologies, “Intex IT-305WC 5MP Webcamera” [Online].
+Available: http://tinyurl.com/lzp68uq. [Accessed Sept. 10, 2014].
+[24] Azhar, S.; Vasanthi, S.; Rupanagudi, S.R., " Low Power Optimization of
+a 3G UMTS Filter," International Conference on Frontiers of Computer
+Science. (ICFOCS), 2011, vol., no., pp., August 2011
+[25] National Institute of Standards and Technology, The NIST Definition of
+Cloud Computing, Recommendations of the National Institute of
+Standards and Technology, Special Publication 800-145, Gaithersburg,
+2011.
+[26] Shao, J.; Wang, Q.; Mei, H.; “Model Based Monitoring and Controlling
+for Platform-as-a-Service (PaaS),” Cloud Applications and Computing
+(IJCAC), International Journal of , vol. 2, issue 1, 2012.
+[27] Ravoor, P.C.; Ranjani, B.S.; Rupanagudi, S.R., "Optimized fingertip
+blob recognition for image processing based touch-screens," Recent
+Advances in Computing and Software Systems (RACSS), 2012
+International Conference on , vol., no., pp.104,108, 25-27 April 2012
+[28] Dhruva, N.; Rupanagudi, S.R.; Sachin, S.K.; Sthuthi, B.; Pavithra, R.;
+Raghavendra, "Novel segmentation algorithm for hand gesture
+recognition," Automation, Computing, Communication, Control and
+Compressed Sensing (iMac4s), 2013 International Multi-Conference
+on , vol., no., pp.383,388, 22-23 March 2013
+[29] Radiocommunication Sector of ITU, Recommendation ITU-R BT.601-
+7, Studio encoding parameters of digital television for standard 4:3 and
+wide-screen 16:9 aspect ratios, March 2011.
+[30] Gonzalez, R.C.; “Morphological Image Processing,” in Digital Image
+Processing, India: Peasrson Education, 2009, Ch 9, sec 2, pp 652-656
+<body>
+<html>

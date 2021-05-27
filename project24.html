@@ -1,0 +1,361 @@
+<html>
+<head>
+<title>COLLECTION OF PROJECTS</title>
+</head>
+<body>
+<table border="0" width="100%" bgcolor="skyblue" height="8%">
+<tr>
+<th width="20%"><font color="white" size="4"><a href="project123.html">PROJECT 1</a></font></th>
+<th width="20%"><font color="white" size="4"><a href="project23.html">PROJECT 2</a></font></th>
+<th width="20%"><font color="white" size="4"><a href="project24.html">PROJECT 3</a></font></th>
+<th width="20%"><font color="white" size="4"><a href="project25.html">PROJECT 4</a></font></th>
+</tr>
+</table>
+<form class = “search-form”>
+<input type = “text” placeholder = “search”>
+<button>search</button>
+</head>
+</form>
+</nav>
+<p>REAL-TIME MACHINE VISION WEED-SENSING
+B.L. Steward and L. F. Tian
+Department of Agricultural Engineering
+University of Illinois at Urbana-Champaign
+Urbana, IL 61801</p>
+<p>
+ABSTRACT
+Much work has been done to employ machine vision technology to sense weeds in crop
+fields. However, the use of machine vision weed-sensing with real-time objectives under variable
+outdoor lighting conditions is a relatively new area. This paper documents an effort to develop
+real-time weed sensing technologies using machine vision under variable lighting conditions.
+Images were acquired of weeds between rows of soybeans. Unsupervised learning by cluster
+analysis was used to classify pixels according to their color. This classified data was then used to
+train a Bayes classifier which was used to create a look-up table for real-time segmentation.
+Adaptive scanning with embedded segmentation was used to estimate weed population. These
+estimates were compared with manual weeds counts. The elapsed time to do this processing was
+measured to see if the real-time requirements were met.</p>
+<p>
+INTRODUCTION
+Large amounts of pesticides are applied each year to the fields of U.S. farmers. In 1989,
+about 800 million pounds of pesticides were applied (Aspelin et al., 1991). Herbicides make up a
+large component of the pesticides used and are relied on heavily for effective weed control
+resulting in reduced yield loss in grain production. Nevertheless, they represent a costly input to
+farmers and a source of ground water contamination.
+Typically, herbicides are applied with a blanket treatment to a whole field without regard
+to the spatial variability of the weeds in the field. This practice results in some areas where no or
+few weeds exist receiving just as much chemicals as those areas with high densities of weeds.
+Obviously, if a more sophisticated chemical delivery system was developed which applied
+chemicals where weeds existed and abstained where there were no weeds, chemical usage would
+be reduced and chemicals would be more effectively placed. Moreover, if chemical application
+rates could be varied according to local weed infestation conditions, further efficiency gains could
+be realized. These practices would result in lower environmental loading and increased
+profitability in the agricultural production sector. Selective spraying, spot spraying, or
+intermittent spraying are different names which are attached to this herbicide application method.
+Research has shown that weed aggregation exists (Marshall, 1988; Wilson and Brain,
+1991; Thorton et al., 1990; Wiles, 1992; Cardina, 1995; Mortensen et al.,1993) and that if
+herbicides were applied in a spatially varying manner based on weed density, a reduction in
+herbicide usage would occur (Mortensen et al., 1995; Johnson, et al.., 1995). Therefore, several
+researchers have been working to develop engineering solutions to the technological challenges
+that a viable selective sprayer presents. A primary challenge is the sensing of weeds and
+discrimination of weeds from crop plants, crop residue and soil. Until now, this is the area where
+2
+most of the research effort has been directed. One approach to this problem has been to use of
+photodetectors to sense weeds (Hooper et al., 1976; Hagger et al., 1983; Shearer and Jones,
+1991; Shropshire, 1990). While photodetector weed sensing represents a viable approach with
+commercial potential (Felton et al., 1991; Cooke, 1996; Beck, 1996 ), photodetectors have quite
+low spatial resolution (Nitch, 1991; Von Bargen et al., 1992) causing difficulty in distinguishing
+between types of plants except by using several narrow wavelength bands (Vrindts and
+DeBaerdemaeker, 1996; Shropshire, 1992).
+Machine vision has been used successfully for many applications in agriculture and shows
+great promise for weed sensing because it utilizes not only spectral information, but also spatial
+and textural information because of its use of high spatial resolution sensors. In addition, a large
+body of knowledge about machine vision and image processing techniques exists.
+In the area of weed sensing, much work has been done. Plant identification has been
+accomplished with the use of shape features of plants (Guyer et al., 1986; Franz et al., 1991a;
+Guyer et al., 1993; Bezenek, 1994; Woebbecke et al., 1992, 1995; Zhang and Chaisattapagon,
+1995), textural information from images of crop canopy and plant leaves (Shearer and Holmes,
+1990; Dave and Runtz, 1995; Zhang and Chaisattapagon, 1995), spectral information (Franz et
+al., 1991b; Zhang and Chaisattapagon, 1995) and fractal analysis on leaf shapes (Critten, 1996;
+Dave and Runtz, 1995). Shropshire (1989) used the Fourier and Hadamard transforms to detect
+if an image of the area between two rows of crop contained weeds. Andreasen et al. (1997)
+developed an algorithm to assess weed density.
+However, little research with a primary objective of real-time operation has been done on
+machine vision weed sensing. Real-time computation "must produce a correct result within in a
+specified time" (Lin and Burke, 1992) and is where "the correctness of a computation depends not
+only on the logical correctness but also on the time at which the results are produced" (Shin and
+Ramanathan, 1994). Tian et al. (1997a) commented on the use of lookup tables (LUT) for realtime
+image segmentation and object classification in their work on the identification of tomato
+seedlings for automated weed control. Nevertheless, real-time operation was never stated as a
+research objective. Only one paper was found that clearly set out to develop machine vision weed
+sensing algorithms "with a real-time implementation in mind" (Brivot and Marchant, 1996). They
+developed segmentation algorithms to separate plants, weeds, and soil in infrared images. The
+majority of the literature, however, describes the use of rather sophisticated algorithms without
+much regard for the real-time operation of such algorithms. Zhang and Chaisattapagon (1995)
+reveal this philosophy when making a comment about their research approach, "However, this
+approach . . . may require a long computation time. For real-time detection, this problem will
+need to be addressed."
+Similarly, much of the machine vision weed sensing research has been done with
+controlled lighting rather than variable natural lighting associated with outdoor field conditions.
+Most of the work in outdoor lighting conditions has been associated with robotic fruit harvesting
+(Sites and Delwiche, 1988; Slaughter and Harrell, 1989; Pla et al, 1993). Nevertheless, Brivot
+and Marchant (1996) and Tian et al. (1997a) documented successful sensing of weeds in diffuse
+natural lighting conditions.
+Using images formed with sunlight as an illumination source represents a greater challenge
+than using those created with controlled illumination. Tian (1995) pointed out that the level of
+3
+illumination under outdoor lighting conditions varies greatly. Moreover, direct sunlight causes
+substantial intensity differences within the images from the low intensity of shadows to the high
+intensity of reflections of shiny leaf surfaces. Furthermore, the temperature of daylight is variable
+causing the color of objects to change. Tian (1995) addressed these issues by using a light
+diffuser to minimize intensity differences within the image. In addition, an environmentally
+adaptive segmentation algorithm (EASA) was used to overcome light variation. In this research,
+real-time operation of a machine vision weed-sensing system was one of the primary objectives.</p>
+<p>
+OBJECTIVES
+As part of the Smart Sprayer Project, an effort to integrate real-time machine vision
+sensing, knowledge-based machine decision making, and variable rate nozzle technology, this
+research had the following objectives:
+1) To develop an algorithm which segments the inter-row area of soybean field
+images and estimates the number of weeds in real-time under outdoor field
+lighting conditions.
+2) To compare these estimates with manual weed counts.</p>
+<p>
+METHODS
+Data Collection
+A Sony XC-003 3-CCD camera was used to acquire images of the area between two rows
+of soybeans. The camera was mounted at a height of 3.35 m (11 ft) on a custom-made camera
+boom (Figure 1) for a Patriot XL sprayer (Tyler Industries, Benson, MN). A Computar model
+M6Z 1212 12.5-75mm F1.2 zoom lens was used to image an area 1.1 m (43 in.) by 0.8 m (33 in.)
+with the 12.5 mm zoom setting. Images were taken with the aperture set at F 8 for sunny
+conditions and F 5.6 for cloudy conditions, shutter speed at 1/250 s. The color temperature was
+set at 5600 K with manual white balance with the -2 db blue channel gain and a -20 db red
+channel gain. The camera had a resolution of 768 by 494 pixels.
+The Y/C output of the camera was routed to an Imagenation (Beaverton, OR) PXC200
+color frame grabber which resided in a Pentium-based portable computer. The frame grabber had
+a resolution of 640 by 486 pixels. Each pixel corresponded to an area of approximately 0.002 by
+0.002 m. The images were grabbed when the computer was triggered by the user and written to
+Windows bitmap files. Images were taken while the sprayer was moving with a forward travel
+speed of 0.6 km/hour (0.4 miles/hour) to minimize motion effects.
+The soybeans were planted in 0.76 m (30 in.) rows and the camera was positioned over
+the center of the area between two rows (Figure 2). Every 1.8 m (6 ft) plastic construction tape
+was placed across area between two rows. Forty of these imaging areas were used in this study
+from a transect 240 ft long in a test plot at the Agricultural Engineering Research Farm, Urbana,
+IL. The soybeans were approximately 0.13 m (5 in.) high when the images were taken. The area
+had a PPI treatment of 0.5 lb/ac Sencor 75DF for broadleaf control prior to planting. Three or
+4
+four images were required to cover the area between these tapes and were manually mosaiced to
+form one image of the area between the tapes.
+Weed counts were made manually by dividing the area between each pair of construction
+tapes in half and counting separately the number of broadleaf weeds and grasses in each half.
+These categories were further subdivided into small and large depending on whether the weed
+under consideration could fit inside a 0.025 m (1 in.) diameter metal ring.</p>
+<p>
+Algorithm Development: Segmentation
+Segmentation is the division of an image into regions which have similar characteristics.
+In the case of weed sensing, there is an interest of dividing the image into regions which are plants
+(either weeds or crop) and background (soil, rocks and residue). For this research, a color sensor
+was used to provide a three component (RGB) data vector to describe each pixel. In earlier
+research (Tian, L. et al., 1997b), a single channel near-infrared (NIR) sensor which produced a
+one element data vector for each pixel was used. Since the NIR reflectance of plants is similar to
+that of residue (Woolley, 1971), the images produced by this sensor were difficult to segment by
+intensity. Residue could be removed by spatial analysis, but this additional analysis came at an
+added computational cost and was not feasible for real-time operation. A color RGB sensor was
+used in this research because of its commercial availability and because it collects a three element
+data vector for each pixel giving more information for segmentation.
+Tian (1995) used an environmentally adaptive segmentation algorithm (EASA) to segment
+plant regions and background regions in a color image with a goal of identifying and locating the
+centers of the tomato plants. The EASA was used for this research to segment plants from the
+background of the color images in real-time. The five steps to the EASA. are:
+1. Data transformation to nullify intensity variation.
+2. K-means cluster analysis for grouping pixels with similar color.
+3. Bayes Classifier training.
+4. Look-up Table creation.
+5. Real-time segmentation.
+The first four steps calibrate the system for a particular lighting condition and are
+performed off-line making computation time less of a constraint. The last step is performed
+during real-time. The strategy here is to push the bulk of the computation to an offline calibration
+procedure so that during real-time operation, little computation is needed to segment the image.
+Representative images for particular lighting conditions are used to calibrate the system. Then, as
+changes in the lighting conditions are sensed during real-time operation, the system can quickly
+adapt to these changes by bringing in the pre-processed calibration data for that particular lighting
+condition. Further work is needed to determine the number of calibration points needed to cover
+the range of lighting conditions and how to determine if an image is representative of a particular
+lighting condition.
+The first step is to transform the data of a representative image into a form which
+minimizes the effect of intensity variation on the segmentation. This is necessary because
+r' R
+R%G%B
+g' G
+R%G%B
+b' B
+R%G%B
+V1
+V2
+I
+'
+& 1
+2
+1
+2
+0
+& 1
+6
+& 1
+6
+2
+6
+1
+3
+1
+3
+1
+3
+R
+G
+B
+5
+(1)
+(2)
+(3)
+(4)
+luminance in images captured under outdoor lighting conditions varies greatly across the image
+resulting in regions with similar color content with very different levels of brightness. An example
+of this would be a long corn leaf which has part of the leaf directly reflecting sunlight and part in
+the shadow of another plant. The whole leaf should be segmented as a plant region; however, if
+intensity is included in the data used for segmentation, it will dominate and will cause regions of
+similar intensity values to be grouped together. Figure 3 shows how intensity dominates the
+scatter in the pixel data as the pixel tend to form a cigar-shaped region along the intensity axis.
+To minimize the effect of intensity (luminance) variation, two data transformation techniques were
+explored.
+The first transformation employed the well-known nonlinear transformation from the RGB
+components to the normalized chromaticity coordinates. This transformation is defined as:
+Since r+g+b = 1, this transformation maps all of the RGB color space onto a plane which
+forms edges of the color triangle as it intersects the R = 0, G = 0, and B =0 planes. This
+transformation removes the intensity information from the data and reduces the dimension of the
+color space as the RGB color space has a dimension of three, but the chromaticity coordinates
+have a dimension of 2 because of the affine linear dependent relationship listed above.
+The second transformation involved a change in coordinates from the RGB coordinate
+system to a coordinate system called the IV V coordinate system described by: 1 2
+6
+This transformation was motivated by and is similar to the initial linear transformation
+used before the nonlinear transformation of V and V to hue and saturation in the IHS system as 1 2
+described by Pratt (1991). This transformation is a rotation of the RGB coordinate vectors to an
+orientation such that one coordinate, I, is collinear with the intensity axis and the other two span
+a plane which is parallel to the color triangle. One of these “color” axes, V , is parallel to the side 1
+of the color triangle which goes from red to green. The value of the coefficient associated with
+the V axis gives a measure of redness or greenness, with red dominated pixels represented by 1
+negative coefficients and green dominated pixels represented by positive coefficients. A zero V1
+coefficient represents a color with equal amounts of red and green. The other “color”axis, V , is 2
+orthogonal to both I and V and runs in the direction from the origin to saturated blue on the 1
+color triangle (Figure 4). This transformation separates the intensity information from the color
+information and allows for further analysis based only on color by using the V and V 1 2
+coefficients and disregarding the I coordinate. The use of these two types of transformations was
+then compared qualitatively.
+After transforming the data, K-means cluster analysis was used to associate individual
+pixels with classes or clusters of similar pixels based on their color characteristics. This step of
+unsupervised learning reveals the underlying color distribution in the data. Four clusters were
+used to classify the data; two clusters typically corresponded to areas which could be considered
+to be background and the other two clusters to plant regions. The initial seed points were set at
+fixed values that were chosen after considering that two of the clusters would have a larger green
+content, and the other two would probably be more grey.
+After cluster analysis, each pixel was associated with a particular cluster or class. This
+information makes supervised learning possible, and a Bayes classifier was therefore trained and
+discriminant functions determined. To do this, the user must first input the clusters which he
+considers to be plants by visually comparing the original image and an image painted according to
+the cluster classification. It seems desirable to eliminate the need for user input and to have the
+system make this decision. This is an area to be explored in future work.
+At this point, it was possible to go through every possible color combination in RGB
+space and map each combination into class space as either a plant or background class. By doing
+this, a look-up table (LUT) was generated for real-time segmentation. When doing the real-time
+segmentation, the computer simply used the color combination as an index into the LUT and
+determined if particular pixels were either plants or background.
+Algorithm Development: Adaptive Scanning
+Because real-time operation was an objective, an estimate of the number of weeds
+between the rows of crop was desired without a great computational burden. No attempt was
+made at this point to distinguish individual crop plants from individual weeds, but an area of
+interest in each mosaiced image was selected manually to be analyzed for weed counting. Spatial
+features of the rows can be used to distinguish between crop row areas and inter-row areas, but
+were not used in this algorithm so as to eliminate errors associated with this type classification
+and to focus on the scanning results.
+Initially, object counting by 4-connectivity was used to count the number of segmented
+"plant" objects. However, it was found that such an algorithm required too much computation to
+7
+be feasible for real-time operation. Therefore, an algorithm was developed which uses a
+technique called "adaptive scanning."
+Adaptive scanning involves the scanning of image columns with a step size that is equal to
+the average run length of the objects encountered. This algorithm only considers connectivity in
+the direction of scanning. Some filtering was done to compensate for segmentation noise. This
+filtering took the form of allowing up to four “background” pixels to occur between two “plant”
+pixels before assigning the two “plant” pixels to two objects. Objects with less then three pixels
+in a runlength were considered to be noise and not an actual object. This algorithm was based on
+the idea that if the weeds have a compact shape, are randomly scattered in an image, and have
+small size variation within the area of an image, then the step size which minimizes the multiple
+counts of a weed and the misses of weeds would be equal to the average runlength across a weed.
+As the algorithm scans an image, it calculates the average runlength and then updates the step size
+for scanning of the next image to a weighted average of the past step size and the current average
+runlength.
+To measure the results of the segmentation and the adaptive scanning, a series of 40
+images corresponding to 80 areas between rows of soybeans which had been manually sampled
+were analyzed. The estimates of the number of weeds were compared with the manual count.
+Each image was loaded into the computer memory. The area between the rows was divided into
+two parts, each of which corresponded to an area for which a manual weed count existed. The
+clock time at the beginning and ending of processing was stored so that the elapsed time to
+segment and scan each image could be calculated. The algorithm ran on a Dolch MegaPac with a
+Pentium processor operating at 133 MHz operating under a Windows 95 operating system.</p>
+<p>
+RESULTS AND DISCUSSION
+The segmentation of images revealed that the data transformation from RGB coordinates
+to the IV V coordinate system resulted in segmentation with less noise then that of images where 1 2
+the data was transformed to chromaticity coordinates (RGB-rgb) before segmentation (Figure 5).
+In particular, in images taken in diffuse (cloudy) lighting conditions, cracks in the soil which were
+darker then the surrounding soil often segmented as plant regions with the RGB-rgb transformed
+data, but only isolated pixels of the cracks segmented as cracks with the RGB-IV V transformed 1 2
+data. This makes sense when considering RGB coefficients (0,1,0) and (0,100,0) are both
+transformed to a the same chromaticity coordinates (0,1,0). However, (0,1,0) should be
+considered grey instead saturated green. This type of relationship is preserved with the RGBIV
+V transformation of low intensity values. In images with direct lighting, regions which should 1 2
+have been classified as plants, contained many holes (pixels segmented as background) within the
+region (Figure 6) when segmenting RGB-rgb transformed data. In addition, the RGB-IV V 1 2
+transformation gave noticeably faster results than the non-linear transform when going through
+the clustering and LUT building steps of the EASA.
+The weed population estimate from the adaptive scanning algorithm was highly correlated
+with the total manual count of the broadleaf weeds and grasses with a correlation coefficient of
+0.94 (Figure 7). The small broadleaves category had the highest correlation coefficient (0.94) of
+all the other categories. This was probably caused by the range of small broadleaf populations
+8
+being much greater than that of the other categories. The correlation coefficients between large
+and small grasses were negative and with magnitude less than 0.3. Two additional reasons why
+the grasses did not correlate with the estimate are 1) they tended to have an elongated shape and
+2) because their long thin leaves, they tended to not segment as plant regions. Other reasons for
+estimation error could be accounted for by: 1) multiple counts due to large leaves of weed being
+counted separately as large variation in weed size occurs and 2) weeds that were not very
+compact being counted several times.
+The mean elapsed time of the segmentation and scanning of an area 0.91 m (36 in.) by
+0.76 m (30 in.) was 0.034 s with a standard deviation of 0.011s . This variability was due in part
+to the algorithm design since as the step size is varied, the time required to segment and scan the
+image will vary. Elapsed time variability could also be explained by the fact that the Windows 95
+operating system is multitasking and not a real-time operation system.
+The small elapsed time for the algorithm indicates that increased complexity could be
+added to the algorithm for improved performance without jeopardizing real-time operation. If,
+for example, a sprayer had a camera mounted 2.74 m (9 ft) ahead of the spray nozzles and an
+image was acquired which had a 1.8 m (6 ft) vertical field of view, then at a travel speed of 16.1
+km/hour (10 miles/hour), a decision would have to be executed 0.41 s after an image was
+captured. This algorithm’s elapsed time falls well below this amount even when multiple areas
+between rows are considered.</p>
+<p>
+CONCLUSION
+An algorithm which employs environmentally adaptive segmentation and adaptive
+scanning was developed and implemented. The RGB-IV V data transformation resulted in 1 2
+qualitatively superior segmentation results over the RGB-rgb transformation. Adaptive scanning
+produced weed population estimates which were highly correlated with total weed counts. The
+low elapsed computation time shows that real-time machine vision weed detection is viable and
+allows room for more sophisticated scanning algorithms which require more computation time.</p>
+<p>
+ACKNOWLEDGMENTS
+The authors would like to acknowledge and thank the USDA National Needs Fellowship
+program, the Illinois Council on Food and Agricultural Research, and Tyler Industries for their
+support of this research.
+The use of trade names is only meant to provide specific information to the reader, and
+does not constitute endorsement by the University of Illinois.</p>
+<body>
+<html>

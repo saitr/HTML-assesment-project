@@ -1,0 +1,957 @@
+<html>
+<head>
+<title>COLLECTION OF PROJECTS</title>
+</head>
+<body>
+<table border="0" width="100%" bgcolor="skyblue" height="8%">
+<tr>
+<th width="20%"><font color="white" size="4"><a href="project123.html">PROJECT 1</a></font></th>
+<th width="20%"><font color="white" size="4"><a href="project23.html">PROJECT 2</a></font></th>
+<th width="20%"><font color="white" size="4"><a href="project24.html">PROJECT 3</a></font></th>
+<th width="20%"><font color="white" size="4"><a href="project25.html">PROJECT 4</a></font></th>
+</tr>
+</table>
+<form class = “search-form”>
+<input type = “text” placeholder = “search”>
+<button>search</button>
+</head>
+</form>
+</nav>
+Review
+Highlights and preliminary results for autonomous crop protection
+M. Pérez-Ruiz a,?, P. Gonzalez-de-Santos b, A. Ribeiro b, C. Fernandez-Quintanilla c, A. Peruzzi d, M. Vieri e,
+S. Tomic f, J. Agüera g
+a Universidad de Sevilla, Área de Ingeniería Agroforestal, Dpto. de Ingeniería Aeroespacial y Mecánica de Fluidos, Ctra. Utrera, km 1, Sevilla 41013, Spain
+b Center for Automation and Robotics (UPM-CSIC), 28500 Arganda del Rey, Madrid, Spain
+c Institute of Agriculture Science (CSIC), Serrano 115, Madrid, Spain
+d University of Pisa, Departimento di Agronomia e Gestion dell´Agroecosistema, Via San Michele degli Scalzi, 2, Pisa, Italy
+e University of Florence, Dept. of Agricultural, Food Production and Forest Management, Piazzale delle Cascine 15, Florence, Italy
+f The Telecommunication Research Center Vienna (FTW), Donau-City Strasse 1, Vienna, Austria
+g Universidad de Córdoba, Dpto. Ingeniería Rural, Campus Rabanales, Córdoba, Spain
+a r t i c l e i n f o
+Article history:
+Received 27 January 2014
+Received in revised form 4 November 2014
+Accepted 7 November 2014
+Keywords:
+Autonomous tractor
+Precision crop protection
+RTK-GPS
+Precision agriculture
+a b s t r a c t
+New technologies are required for safe, site-specific and efficient control of weeds, pathogens and insects
+in agricultural crops and in forestry. The development and use of autonomous tractors equipped with
+innovative sensor systems, data processing techniques and actuation tools can be highly beneficial
+because this technology allows pest control measures to be applied only if, when, and where they are
+genuinely needed, thus reducing costs, environmental damage and risks to farmers. RHEA (Robotics
+and associated High-technologies and Equipment for Agriculture) is an EC-funded research project conducted
+by a consortium composed of 15 research partners from eight European countries. The focus of
+the project is the design, development and testing of a new generation of automatic and robotic systems
+for both chemical and physical pest management. A heterogeneous fleet of small, cooperative ground and
+aerial robots equipped with advanced sensors, enhanced end effectors and improved decision control
+algorithms will be used. Initially, we are investigating three major scenarios: (a) chemical weed control
+in winter wheat, (b) thermal weed control (i.e., flaming) in maize and (c) variable applications of pesticides
+in olive crops. A preliminary system evaluation demonstrated that the intelligent sprayer boom
+applied the control agent to over 95% of the target area and that the response time, 10 s, of the directinjection
+system was anticipated in the sprayer system to ensure the accuracy of herbicide spraying. Field
+trial results showed that the estimated cost for site-specific flame weeding was approximately 24 € ha1,
+whereas approximately 52 € ha1 was needed to perform a conventional broadcast treatment. Thus, the
+use of VRA (Variable Rate Application) flaming reduces the use of liquid petroleum gas (cost savings of
+28 € ha1). The results also indicated that the control system, mounted on a prototype, air-blast sprayer
+design, produced a precise system response to variation in the target features, an approximate accuracy
+of 0.1 m in horizontal resolution and a rapid actuation response of approximately 100 ms. Workshop and
+field experiments provide convincing evidence that autonomous agricultural vehicles equipped with
+intelligent implements represent an important step forward for optimizing pest control applications in
+sustainable row crop, orchard and cereal crop production systems.
+ 2014 Elsevier B.V. All rights reserved.
+Contents
+1. Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 151
+2. Mobile units . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 151
+2.1. Autonomous tractor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 152
+2.2. Communications and Global Navigation Satellite System (GNSS) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 153
+http://dx.doi.org/10.1016/j.compag.2014.11.010
+0168-1699/ 2014 Elsevier B.V. All rights reserved.
+? Corresponding author at: Ctra. Utrera, km 1, Sevilla 41013, Spain. Tel.: +34 (954) 481 389; fax: +34 (954) 486 436.
+E-mail address: manuelperez@us.es (M. Pérez-Ruiz).
+Computers and Electronics in Agriculture 110 (2015) 150–161
+Contents lists available at ScienceDirect
+Computers and Electronics in Agriculture
+journal homepage: www.elsevier.com/locate/compag
+3. Design and development of pest control tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 155
+3.1. Intelligent sprayer boom. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 155
+3.2. Mechanical and thermal weed control system . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 155
+3.3. Air-blast sprayer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+4. Preliminary results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+4.1. Autonomous tractor prototype . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+4.2. Autonomous variable rate boom sprayer prototype . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 158
+4.3. Mechanical and thermal weed control system . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 159
+4.4. Air-blast sprayer prototype. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 160
+5. Conclusions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 160
+Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 160
+References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 161
+1. Introduction
+Agrochemical expenditures in the EU totaled EUR 8 billion in
+2010 (ECPA, 2011). Increasing agrochemical costs place pesticide
+and fertilizer users under increased pressure to reduce the rate of
+pesticide application and improve application accuracy. According
+to the European Crop Protection Association, agrochemical products
+contribute significantly to food production; each euro
+invested in pesticides returns 4 euros in crops saved (ECPA,
+2008). However, pesticide use represents a heavy economic burden
+for farmers and a substantial chemical load for the environment,
+and it increases the risks of undesirable side effects on human
+health. Sustainable agricultural systems require safe, effective
+and efficient pest control operations to ensure the success of crop
+production (Gutjahr and Gerhards, 2010; Perez-Ruiz et al., 2011).
+In recent years, the European Commission has proposed many
+public actions to seek a meaningful change in the agricultural sector
+and to achieve a significant reduction in the risks associated
+with the use of pesticides while maintaining an adequate level of
+crop protection (Barberi, 2012). Today, many European farmers
+and industries have embraced the principles of good plant protection
+practices to provide a basis for their choice of pesticide ingredients
+and formulation, dosage (and, if appropriate, volume),
+number of applications, application equipment and method of
+application. Many research groups have been examining the development
+of autonomous vehicles and robotic technology in bio-production
+systems to optimize complex agricultural operations
+related to precision weed management. Examples include an
+autonomous platform for robotic weeding (Åstrand and
+Baerveldt, 2002; Bakker et al., 2010), a precision spraying system
+(SØgaard and Lund, 2007; Gil et al., 2013; Tewari et al., 2014), an
+automatic device for non-chemical control of pests (Tillett et al.,
+2008; Perez-Ruiz et al., 2012, 2014) and precision methodology
+for thermal application (Zhang and Slaughter, 2011; Zhang et al.,
+2012; Peruzzi et al., 2012).
+Overcoming technological challenges in information and communication
+systems has allowed the optimization of weed/pest
+and crop sensors. These sensors can be built with enhanced actuators
+to perform weed control actions. Additionally, autonomous
+platforms can be provided to move these sensors and actuators
+throughout the field or location of interest. There are currently
+two ongoing FP7 (Seven Framework Programme) projects in Europe
+related to the autonomous navigation of mobile robots in agriculture:
+Robot Fleets for Highly Effective Agriculture and Forestry
+Management (RHEA-GA no. 245986) and Clever Robots for Crops
+(CROPS-GA no. 246252). Autonomous weed control systems are
+the principal concept behind the RHEA project, which has a focus
+on row crops and forestry. The objective of the CROPS project is
+the development of a robotic platform capable of site-specific
+spraying as well as selective harvesting of high-value crops such
+as greenhouse vegetables, orchard fruits and grapes. Both projects
+are large-scale FP7 European projects conducted by a consortium
+formed by 19 (RHEA) and 14 (CROPS) multidisciplinary, experienced
+partners from industry, research centers and academia.
+These two projects seek to apply automatic pest control systems
+to agricultural crops and orchards with the goal of improving the
+economy and environment while sustaining rural regions by creating
+new technology-based jobs.
+Although several sensing technologies based on optical measurements
+are already available for crop monitoring (Scotford
+and Miller, 2005), most of them have been commercially implemented
+using all-terrain, human-operated vehicles, which can be
+considered to represent an intermediate step in the development
+of unmanned vehicles or robots. However, certain vehicles currently
+in use in agriculture are extremely large. Consequently, dangerous
+situations may emerge if extremely large agricultural
+vehicles are operated in autonomous mode. Therefore, an innovative
+and more suitable solution may involve a fleet of small/medium
+sized vehicles, particularly robotized mobile units, capable of
+collaborating among themselves to complement their sensor/
+action tasks.
+The advantages of autonomous tractors over conventional large
+tractors equipped with many different actuators and end effectors
+may include the following:
+1. Several small/medium-sized autonomous tractors can achieve
+productivity equal to or greater than that of one large machine.
+2. A fleet of small/medium robots is safer than a large machine
+running autonomously.
+3. Robot fleets allow for mission re-planning in case one vehicle
+fails, whereas the failure of just one large machine will stop
+the whole mission until the machine is repaired.
+4. A group of small/medium-sized robots, each with a small number
+of end effectors, is more precise and efficient than a large
+machine with a large number of end effectors.
+5. A robot fleet can be supervised by just one operator, whereas
+large machines need one operator each.
+The paper is structured as follows: Section 2 is devoted to the
+description of several important elements involved in the RHEA
+concept, such as the autonomous tractor and the communication
+and location systems. Section 3 describes the new pest control
+implements previously designed and developed in this European
+project. Section 4 reports preliminary results of experimental tests
+conducted in the laboratory and in the field.
+2. Mobile units
+The RHEA concept of autonomous weed control involves the
+development of an autonomous tractor (ground unit) and aerial
+robots to deploy a surveillance and actuation system over the mission
+field. The ground units are based on a medium-sized autonomous
+vehicle with onboard equipment for navigation and pest
+M. Pérez-Ruiz et al. / Computers and Electronics in Agriculture 110 (2015) 150–161 151
+control treatments. Due to the integration of Global Navigation
+Satellite Systems (GNSS) and sensors, each tractor controller can
+receive its desired trajectories from the mission planner and its
+current position from its own geographical positioning system. A
+Base Station is located next to the mission field and is equipped
+with a computer and software especially designed to plan and
+supervise the missions of the autonomous tractors.
+2.1. Autonomous tractor
+Three commercial tractors have been adapted for autonomous
+operation. Each autonomous tractor has been furnished with a perception
+and actuation system targeting the mission field. The platform
+of the autonomous vehicle is a conventional 38 kW tractor
+(New Holland Boomer T3050, 3-point hitch) that has been retrofitted
+for autonomous agricultural operation. Several hydraulic and
+mechanical modifications have been made to the commercial tractor
+to install new systems. The seat, the brake pedals, the throttle
+pedal and handbrake have been removed, as they are no longer
+used. These modifications have furnished additional space in the
+cabin to house the electronics. The cabin of the original tractor
+has been cut and the roof lowered (see Fig. 1). The roof can be easily
+removed from the cabin structure to access the electronics
+inside the cabin. Due to the cabin modifications, new doors and
+new windows have been installed to soundproof the cabin. The
+cabin ventilator has been retained and can be activated with a button
+located on the left side of the roof inside the cabin.
+A frame has been installed on the retrofitted tractor to mount
+most of the necessary equipment, including the on-board computers,
+inertial measurement unit, modem for communications, realtime
+kinematics (RTK)-GNSS receiver (BX982, Trimble Navigation
+Ltd., Sunnyvale, CA, USA) for navigation and connector boxes. The
+motion of the autonomous tractor has three primary degrees of
+freedom (longitudinal, lateral and yaw). The tractor control is
+responsible for sensing the vehicle location and heading angle.
+Fig. 2 shows the equipment setup used in the field experiments.
+A GNSS-based navigation system has been designed and is used
+for automatic row guidance of the autonomous tractor. The trajectory
+generated by the path planner needs to link the current vehicle
+location (determined by local plane coordinates) with the
+desired target point. The location of the tractor is readily available
+using the RTK-GNSS receiver mounted onboard. The coordinates of
+the target point are calculated by the navigation planner. For
+example, if a parallel track system has generated a series of waypoints
+parallel to the user-defined reference straight line (the A–
+B line), the navigation engine of the vehicle compares its current
+position with the location of the subsequent point of the trajectory
+and deduces the best steering command required to reach the targeted
+waypoint. This comparison between the real position and the
+desired point is expressed in terms of two fundamental parameters:
+offset error (lateral displacement) and heading error.
+To configure a fully autonomous agricultural system capable of
+ensuring precise navigation, it is necessary to configure a framework
+(hardware and software) to merge perception (accurate vehicle
+positioning) and action (steering and speed control). The
+hardware framework should be modular, flexible and robust,
+exhibiting real time-multitasking features and integrating modern
+standard communication protocols. Specifically, the vehicle controller
+runs on a cRIO 9082 NI computer, and the control algorithms
+were developed using the LabVIEW™ (National
+Instruments, Austin, TX, USA) graphical programming environment
+(Emmi et al., 2013).
+Preliminary experiments were conducted to verify the performance
+of the autonomous tractor when it was navigated in a
+Fig. 1. Ground Mobile Unit transformation.
+152 M. Pérez-Ruiz et al. / Computers and Electronics in Agriculture 110 (2015) 150–161
+straight line. Field tests were performed over a one-week period
+during the winter of 2013 at the Center for Automation and Robotics
+field experimental site of the Spanish National Research Council
+(CISC) in Madrid, Spain (latitude 40.25835007 N, longitude
+3.44696865 W). The following three criteria were used to select
+the test plot: (i) a plot that was almost flat, (ii) a plot large enough
+for five 20-m rows and (iii) a plot that was within the range of the
+Base Station used in the experiment. Each dynamic test consisted
+of five straight-line passes with a length of 20 m (Fig. 3). Two
+points (‘‘A’’ and ‘‘B’’) for each straight line were generated as actual
+geospatial locations by an RTK-GNSS receiver using a handheld
+surveying system interfaced with an RTK-GPS rover (Model
+Bx982, Trimble Navigation Ltd., Sunnyvale, CA, USA). The GNSS
+coordinates for points A and B were obtained by placing the bottom
+tip of the 2-m GPS antenna survey pole against the soil surface
+and holding the pole vertical with the aid of a bubble level. The
+WGS 84 Datum was used during all RTK-GPS measurements.
+Points A and B were established for a dual purpose: (a) the
+straight-line mission planning for the autonomous tractor and (b)
+a straight line defined on the ground. All passes were conducted
+at a travel speed of 2.5 km h1.
+2.2. Communications and Global Navigation Satellite System (GNSS)
+The high-level communication architecture of the RHEA system
+integrates two different networks: (i) an on-board IP-based network
+deployed on each Ground Mobile Unit, and (ii) a fleet IP-based network
+connecting Ground Mobile Units and the Base Station. Onboard
+IP-based network is realized in the Ground Mobile Unit by
+means of IEEE 802.3 Local Area Network (LAN) connected by a managed
+Ethernet switch. The switch provides built-in management
+functionalities that enable the configuration of QoS parameters,
+e.g., traffic prioritization, as well as alarming in the case that the configured
+interfaces do not function correctly. On the other hand,
+robust wireless communication is central support capability of this
+system; as mobile units move within the field, they exchange status
+information with the supervision system (running in the Base Station)
+or among themselves. The fleet communication system is
+based on a commercial Off-The-Shelf (OTS) programmable wireless
+router (model ALIX 3D2, PCEngines GmbH, Glattbrugg, Switzerland)
+that featured an AMD Geode LX800 500 MHz CPU, 256 MB of DDR
+RAM, a 100 Mbit/s Ethernet port and two miniPCI slots. These slots
+are used to add two wireless, IEEE 802.11a and IEEE 802.11n, hardware
+modules to the system. The two main wireless IEEE 802.11
+communication technologies are chosen to operate in unlicensed
+industrial, scientific and medical (ISM) frequency bands. To improve
+their robustness and resilience to interference and fading effects, the
+modules operate in different sub-bands: one IEEE 802.11n module
+utilizes channels in the most commonly used 2.4 GHzband, whereas
+the other module, IEEE 802.11a, operates in the 5 GHz band. The
+embedded board and the wireless hardware modules are protected
+by an IP65 aluminum enclosure. Power is supplied to the system by a
+Fig. 2. Autonomous tractor unit configuration. passive Power over Ethernet (PoE) system. For this reason, an exter-
+Fig. 3. Straight-line tests for the autonomous tractor.
+M. Pérez-Ruiz et al. / Computers and Electronics in Agriculture 110 (2015) 150–161 153
+nal adapter is used to connect 12 VDC voltage to the CAT6-shielded
+Ethernet cable.
+The RHEA communication system provides two main communication
+services to the application developer: (i) the Best-Effort (BE)
+service that provides high throughput and transmission range, but
+without guaranteed transmission time, and (ii) the Real-Time (RT)
+service that features small throughput and transmission range.
+The former is based on the standard CSMA-CA protocol and the later
+on the Time Division Multiple Access (TDMA) protocol, which guarantees
+a dedicated time slot for data transmission.
+The communication facilities at the Base Station served to provide
+Internet connectivity for remote management of the system
+and potential full integration within the open environmental service
+framework. The identification and localization of individual
+humans, both those carrying mobile terminals and those without
+them, within the area in which the RHEA system is deployed is
+an important requirement.
+The Base Station was the interaction point between the entire
+system and the operator. The basis of this human–machine interaction
+was a user-friendly Graphical User Interface (GUI) for
+system operation, monitoring, information record-keeping and
+operation optimization. In the future, the GUI system will be
+connected in real-time with the mobile units and will display the
+current state of operations in 3D, i.e., it will show the position,
+orientation, speed and status of every robot, aerial and ground unit.
+It will allow the user to send instructions to the fleet of robots and
+will include a simulation system to allow the user to rapidly test
+new operations before the instructions are actually sent to the real
+system or to test the results, in simulation mode, of an emergency
+procedure initialized from the current real situation. This capability
+will help to manage emergency situations in which the user
+must rapidly define new operations in case of a problem (e.g.,
+the failure of one robot).
+Real-time kinematic (RTK) systems are the most accurate solution
+for GNSS applications (2-cm accuracy). An RTK system
+requires two receivers (a Base Station and a rover), a Wi-Fi
+transmitter link and an embedded navigation controller that integrates
+rover sensors and GNSS data to compute the final position of
+the rover receiver (Misra and Enge, 2006). In RHEA, an RTK-GNSS
+receiver was configured as a reference station placed in the Base
+Station. This receiver offers centimeter-level accuracy based on
+RTK solutions and sub-meter accuracy code-phase solutions.
+Streamed outputs from the receiver provide detailed information,
+including the time, position, quality assurance numbers and the
+number of tracked satellites. The receiver also outputs a onepulse-
+per-second (1 PPS) strobe signal that allows remote devices
+to synchronize time information precisely.
+The main task of the GNSS receiver on the Base Station is to
+transmit the GNSS correction signal to each Ground Mobile Unit
+to determine the location of the autonomous tractor accurately
+(Fig. 4). The Center for Automation and Robotics (UPM-CSIC) and
+University of Seville worked together to determine the GNSS centimeter-
+level accuracy, through RTK signals, of the straight path
+provided for the autonomous tractor.
+The rover GNSS receiver was similar to the receiver situated in
+the Base Station unit, but it enabled the calculation of headings
+derived from dual-antenna GNSS measurements. The rover used
+an RTK-GNSS correction signal from a local (located 0.3 km from
+the test site) GNSS reference station to obtain RTK fixed-quality
+accuracy. The rover receiver was set to output the ‘‘NMEA-0183
+PTNL, AVR’’ string containing the geographic coordinates (latitude
+and longitude) and yaw angle in degree and range (meters)
+between the primary and secondary antennas at a 1-Hz rate via
+an RS-232 serial connection. Single-antenna GNSS systems have
+difficulty determining where the antenna is positioned relative to
+the vehicle and object of interest, especially if the dynamics of
+the target are not pronounced. Thus, independent observations
+from both antennas were passed to the processor, where multiconstellation
+RTK baselines were computed. A single connection
+to the rover receiver via RS232, USB, Ethernet or CAN delivered
+both centimeter-accurate positions and a heading accuracy better
+than one-tenth of a degree (2-m baseline).
+Fig. 4. Flowchart of the location system on the autonomous tractor.
+154 M. Pérez-Ruiz et al. / Computers and Electronics in Agriculture 110 (2015) 150–161
+3. Design and development of pest control tools
+3.1. Intelligent sprayer boom
+An experimental sprayer was designed to deliver a variable-rate
+application similar in concept to that developed by SAP (Carballido
+et al., 2012) but modified to monitor the response time and herbicide
+concentration in a variable-rate application in a direct-injection
+sprayer. The herbicide sprayer boom sections consisted of
+twelve high-speed solenoid valves (Model VC01, NTech Industries,
+Inc., Ukiah, CA, USA), which were mounted on a stainless steel
+sprayer boom with an equidistant spacing of 0.5 m. The solenoid
+valves consisted of a 1=4
+00 hose barb brass inlet for incoming liquid,
+a spray nozzle, a nozzle cap, an LED indicator, a 3-pin electrical
+connector (signal, negative and positive) and two captive screws.
+The boom sprayer was divided into 12 sections, each containing
+one solenoid valve (Fig. 5). Each valve was energized by a 12-V
+source that allowed the spray from each section to be controlled
+independently. The LED indicator was lit when the solenoid was
+open.
+A commercial central direct injection system (Model Sidekick
+Pro, Raven Industries Inc., Sioux Falls, SD, USA) was equipped
+with a water tank (200 L) and a separate container for the herbicide
+(15 L) for injection according to the prescription ordered by
+the system that generates the behavior of the tractor, i.e., the
+High-Level Decision Making System (HLDMS). The boom controller
+(SCS-sidekick) was handled by the HLDMS and the signal
+inputs from various sensors. The HLDMS program, written in Labview
+™, used the RTK-GPS position and the application rate map
+information to determine the orders to be sent to the boom controller.
+A UAV (model AR200, AirRobot GmbH & Co., KG, Arnsberg,
+Germany) equipped with a multi-spectral camera, which is capable
+of acquiring multi-spectral images at the desired locations
+and times, was used. A specific algorithm allowed analysis of
+the images to obtain application rate map information (Peña
+et al., 2013).
+An intermediate connection box was installed between the
+sprayer and HLDMS to accommodate the signal sensors and to host
+the injection system controller and the automation (PLC) device.
+The injection system controller supplied a variable voltage to the
+gear motor to power the injector pump. This voltage caused the
+injector pump to turn at the appropriate speed to generate the
+desired flow rate of the active ingredient. An encoder integrated
+in the system measured the flow rate of active ingredient from
+the injector pump speed. The controller used the active ingredient
+flow rate from the pump speed to determine whether a change in
+the flow rate of the active ingredient was required. The flow rate of
+the active ingredient was verified using a mini-flow meter (model
+508-2704, RS Components, Oxford, UK).
+After all of the components were assembled on the implement,
+the sprayer was tested in the workshop by simulating situations
+that would occur under field conditions. This innovative system
+included the mechanical (e.g., stability of the boom and hose
+length) and electrical (e.g., cables, voltage levels, power and communication
+equipment) subsystems, and it provided a variablerate
+application based on weed infestation maps.
+Laboratory and field tests were conducted during the winter of
+2014. A 0.25-ha experimental winter wheat crop was selected for
+this study (Latitude: 40.3140499 N, Longitude: 3.4842388 W). For
+this preliminary evaluation, nine weed patches 3 m  3 m in size
+were planted following a regular grid. With the configuration of
+the autonomous tractor and sprayer boom shown in Fig. 5, the
+accuracy of herbicide application (i.e., on/off time lag, % targets
+sprayed, % target not sprayed and % non-target sprayed) was evaluated,
+and the deviation of the autonomous tractor from its route
+plan was determined with the aid of straight paper strips (see
+Fig. 6).
+3.2. Mechanical and thermal weed control system
+The prototype was provided with five tools for mechanical
+weed control and four units for thermal weed control. It was specifically
+designed for wide row crops. Each thermal unit was composed
+of a pair of 0.25-m-ide LPG (a liquefied mixture of propane
+and butane) rod burners positioned to target one side of each crop
+row (cross-flaming) (Fig. 7). The flame precisely impacted the
+weeds growing in the ‘‘in-row’’ space (a strip of soil 0.25 m wide
+with the crop plants placed along the centerline) and the lower
+heat-tolerant part of the maize crop. All of the thermal weed control
+end-effectors of each working unit were mounted on an
+adjustable articulated parallelogram structure equipped with two
+small pneumatic-tired wheels. During the treatment, these wheels
+tracked the soil surface, maintaining the burners at the correct distance
+from the ground.
+This implement performed cross-flaming only if weeds were
+identified by the real-time image-based detection system placed
+on the autonomous tractor. This detection system discriminates
+between crop rows and weeds in wide-row crops, working in real
+time with the image acquired from a camera (model SVS4050, SVSVISTEK
+Gmbh, Seefeld Germany) on board and under uncontrolled
+lighting and movement conditions (Guerrero et al., 2014).
+The pressure of the LPG was adjusted according to the weed
+cover: no treatment if the weed cover was near 0%, low LPG working
+pressure if the weed cover was less than 25% and high LPG
+working pressure if the weed cover was greater than 25%. In fact,
+the LPG feed was configured with two independent manual pressure
+regulators to enable the setting of various LPG working pressures.
+The purpose of this configuration was to obtain, at certain
+Fig. 5. Prototype automated variable rate sprayer for real-time application.
+M. Pérez-Ruiz et al. / Computers and Electronics in Agriculture 110 (2015) 150–161 155
+constant values of working speed, various LPG doses per unit surface
+area. During the treatment, the compressed LPG inside the
+tank must be heated to induce it to pass from the liquid phase to
+the gas phase. If the working pressure is high, the supply of heat
+from the environment to the LPG will not be sufficient, and the bottles
+will become too cool. If the temperature decreases below the
+vaporization temperature of LPG at atmospheric pressure, the gas
+stops flowing, and the flame in the burner will be extinguished.
+To overcome this operational situation, the working machine was
+equipped with a heat exchanger consisting of a cylindrical hopper
+containing water heated by the exhaust gases (flowing in a dedicated
+pipe) of the endothermic engine of the autonomous Ground
+Mobile Unit.
+During the treatment, the LPG tanks were placed in the hoppers
+and partially immersed in the heated water. Given a volume of
+water of 70 dm3 within the hoppers, the total weight of the
+machine can range from 920 kg to 940 kg according to the type
+of gas tank installed.
+As in the case of the sprayer boom, the HLDMS sends to the controller
+of this prototype the activating commands that operate over
+Straight
+paper strips
+Fig. 6. Structure of experimental field for measurements.
+Fig. 7. Prototype implement for mechanical and thermal weed control and four LGP
+tanks.
+156 M. Pérez-Ruiz et al. / Computers and Electronics in Agriculture 110 (2015) 150–161
+the burners in the appropriate locations while the plow operates
+continuously between rows.
+An important issue in research and commercial flame weeder
+system technology is the consumption of LPG fuel. A simplified
+simulation of a 16-row maize field infested with weeds was performed
+to produce a precise flaming treatment. The crop rows
+were divided into cells 0.25 m wide and 0.5 m long.
+Moreover, during the field tests conducted in Madrid in 2013
+and 2014 to integrate and optimize the functioning of the HLDMS,
+LLAS, weed detection and the flaming systems, the effects of the
+thermal treatments were evaluated on an artificial infestation of
+Sinapis alba L. The flaming treatments were performed both at
+early and late stages of development in maize (2-leaf and 5-leaf
+growth stages) to evaluate both the degree of weed reduction
+and the eventual damage caused to the crop plants. The effect of
+flaming in the intra-row space was determined on 2-m long strips
+and expressed as the percentage of weed reduction. The mechanical
+removal of weeds in the inter-row space was also determined.
+The damage caused by open flame to maize was visually evaluated
+after the treatment, and the time eventually needed for recovery
+was monitored.
+3.3. Air-blast sprayer
+An air-blast sprayer (model Oktopus from NOBILI S.p.A., Molinella,
+Italy) with a 300-L capacity and a centrifugal fan, which
+obtained 15 kW from the power take-off (P.T.O.) at an average
+maximum hydraulic flow rate of 100 L min1 for the high-pressure
+pump, was retrofitted for the precision application of agricultural
+chemicals in olive groves, woody crops and orchards. It consisted
+of two main vertical steel frames that supported two sets of spray
+nozzles. The spray nozzles on each side of the hydro-pneumatic
+sprayer were divided into four independent vertical bands with
+separate chemical dose application controls. The upper and lower
+spray nozzles on each side of the frame could rotate in a range of
+0–30 to adapt the spray direction to the canopy size. The two central
+nozzles on each side were static, as shown in Fig. 8. The fluid
+flow in each spraying nozzle was controlled by double nozzles on
+each spray module managed through two electronic solenoid-actuated
+valve (model VE146 V, Parker, Etrromotori S.R.L., Ischitella,
+Italy, each energized by a 12-V source), which allowed the spray
+from each spray band to be controlled independently.
+For the detection system, four active sensors (model U-GAGE
+T30U, Banner Eng. Corp., Minneapolis, MN, USA) were used per side
+to obtain noncontact distance measurements. These ultrasonic
+sensors provided data on the canopy width of each vertical band
+observed and operated in association with each solenoid-actuated
+valve/nozzle. The sensors were positioned with an equidistant
+spacing of 0.5 m on a steel rod mounted on the left and right side
+of the sprayer and in advance of their associated nozzles by
+approximately 1.1 m. The sensing range of the devices was 300–
+2000 mm, with a sensing repeatability of ±0.25% of the distance.
+The pulse frequency was 128 kHz. The window limits of the ultrasonic
+sensors could be set with push buttons on the back of the
+sensor or via remote programming. The logic of the detection system
+ensured that when the canopy was detected, the measurement
+was sent to the PLC (LLAS), which recognized the scenario
+and consequently executed an instruction and commanded the
+related actuator devices to manage the liquid and airflow (Fig. 8).
+The airflow operation was performed by (i) eight butterfly
+valves located on each pipe of the eight-fan collector calotte to
+control the airflow rate in each nozzle, (ii) a main butterfly valve
+in the inlet manifold to control the general air flow rate of the
+pneumatic system and (iii) a variable inclination of the four spraying
+terminal modules to improve the deposition in the sensitive
+areas of the canopy. To automate the system, three types of kinematic
+couplings driven by stepper motors (Lin Engineering Corp.,
+Morgan Hill, CA, USA) were installed. These couplings were managed
+by the motion controller (model DS3044, LAM Technologies,
+Florence, Italy), which allowed accurate motor control of both
+speed and position. Moreover, the motors were fully programmable
+with the free User Datagram Protocol software (UDP Commander,
+LAM Technologies Inc., Italy) and could be easily
+interfaced with the standard Programmable Logic Controller
+(PLC). The PLC allowed the monitoring of all sensors and instrumentation
+systems together with the related algorithms.
+To guarantee safe working conditions in the preliminary field
+tests, it was necessary to ensure that the prototype sprayer only
+moved forward on its wheels. At the end of each row or when it
+needed to turn, it was necessary to lift the machine using the
+three-point hitch lift. The maximum forward speed was 5 km/h;
+the detection system did not operate properly at higher speeds
+(see Fig. 9).
+4. Preliminary results
+4.1. Autonomous tractor prototype
+The autonomous tractor was able to follow a trajectory based
+on commands received by the HLDMS. These results validated
+the ISOBUS communication and most of the software related to
+the displacement of the autonomous tractor (i.e., steering controller,
+Scenario1 Scenario 2 Scenario 3 Scenario 4
+Fig. 8. Rules on spray modules to adapt dosage to the canopy thickness on each band: scenario 1 corresponding to the presence of 100% of canopy?100% dose, scenario 2
+presence of 50%?70% dose, scenario 3 presence of <50%?30% dose and scenario 4 absence of canopy?0% dose.
+M. Pérez-Ruiz et al. / Computers and Electronics in Agriculture 110 (2015) 150–161 157
+combine control module, brake controller, safety controller and
+remote receiver controller). The actuation of the implements validated
+the PTO, the hitch and the control of the rear electro-hydraulic
+valves. The successful stopping of the tractor by the remote
+control validated the safety controller and remote receiver.
+Table 1 shows the RMS value and standard deviation for the
+error performance of the GNSS receiver mounted on the autonomous
+tractor in an RTK correction signal usage environment. The
+GNSS receiver showed a horizontal accuracy of 2.5 cm and a vertical
+accuracy of 3.7 cm on a continuous real-time basis. This level of
+accuracy was expected because the RTK technique can determine
+the sensor position within a few centimeters (Trimble, 2007). The
+average RMS cross-track error of 2.4 cm in the RTK correction signal
+system indicates that the passes were extremely straight, as
+desired for the autonomous tractor. A between-row error with a
+constant standard deviation was obtained, and the average value
+of these errors for RTK was 1.43 cm. These results demonstrate that
+the tractor controller was able to track each straight line with a
+standard deviation better than 3.5 cm; the lateral position error
+of the vehicle never deviated by more than 4 cm for RTK.
+4.2. Autonomous variable rate boom sprayer prototype
+The HLDMS-controlled sprayer boom has been successfully
+developed. The HLDMS generated commands by reading a
+prescription map and the geospatial position of the tractor to
+determine the control orders for the spray valves in the fields. This
+functional capability was also successfully developed. After all of
+the components were assembled on the implement, the sprayer
+was tested in the workshop by simulating situations that would
+occur under field conditions. This innovative system included the
+mechanical (e.g., stability of the boom and hose length) and electrical
+(e.g., cables, voltage levels, power and communication equipment)
+subsystems, and it provided a variable-rate application
+based on weed infestation maps. The travel times from the injection
+point to the nozzles were determined, and the data in Table 2
+shows the time required for the flow in each scenario (275, 550 and
+1100 L h1 applied flow rate). For the standard-volume application,
+the distance between the injection point and nozzle caused a time
+delay of 10 s. These results represent a significant improvement
+compared with the results of Walker and Bansal, 1999, in which
+the time delay exceeded 20 s.
+The leadtime for herbicide injection prior to spraying according
+to the weed maps was programmed into the HLDMS. This direct
+herbicide injection system kept the chemical and the water separate
+prior to the actual spraying, thus making the machine easier
+to clean. The rate of application of the product can also be varied
+according to the requirements placed on the system.
+During the application field test performed to evaluate the
+accuracy of herbicide spraying, a slight delay in the opening and
+closing of the valves was observed (Fig. 10a). Furthermore, because
+the cells to be treated were 0.5 m  0.5 m, the cells located on the
+border of the patch were marked as treated if they had been partially
+treated when the autonomous tractor reached them during
+its first directional pass. Accordingly, the valve was not opened
+again when the tractor returned to those cells (Fig. 10b).
+The magnitude of the savings in this field test showed a dependence
+on the percentage of the field that was infested by weeds. A
+3.24% weed infestation resulted in a 96.65% savings of liquid
+applied per hectare. Theoretically, a 10% weed infestation would
+result in a savings of 90%, a 25% weed infestation would save
+75% and a 50% weed infestation would save 50% of liquid applied
+per hectare.
+Fig. 9. (a) Air-blast sprayer prototype attached to the autonomous tractor and (b) illustration showing the distribution of the spray nozzles.
+Table 1
+Statistics for the GNSS receiver obtained through the use of RTK correction signal on
+the autonomous tractor in motion.
+Row Measurements RTK-GNSS (cm)
+RMS S.D.
+1 122 2.71 2.10
+2 122 3.36 1.52
+3 122 1.36 0.87
+4 122 2.93 1.61
+5 122 1.65 1.05
+All rows 610 2.40 1.43
+Table 2
+Travel time of water/herbicide flow in the sprayer system.
+Scenario Applied flow rate (l/h) Time before boom (s) Right/left boom
+t1 (s) t2 (s) t3 (s) t4 (s) t5 (s) t6 (s)
+1 275 4.53 1.32 3.16 3.95 5.26 7.90 15.79
+2 550 2.26 0.66 1.58 1.97 2.63 3.95 7.90
+3 1100 1.13 0.33 1.52 0.99 1.32 1.97 3.95
+158 M. Pérez-Ruiz et al. / Computers and Electronics in Agriculture 110 (2015) 150–161
+4.3. Mechanical and thermal weed control system
+The three ranges of weed cover (see Section 3.2 for definitions)
+were then associated with three levels of treatment. The frequencies
+of the values of weed cover according to the three ranges are
+shown in Table 3.
+A simulated weed distribution map was constructed using the
+weed coverage observed from these data. A random number from
+1 to 100 was associated with each cell and used to assign the simulated
+weed coverage to each cell. If the random number associated
+with a cell was between 1 and 51, the weed cover in that
+cell was considered to fall within the first range in Table 3; if the
+random number associated with a cell was between 52 and 83,
+the weed cover in that cell was considered to fall within the second
+range; and if the random number associated with a cell was
+between 84 and 100, the weed cover in that cell was considered
+to fall within the third range.
+Based on the information in Fig. 11, which presents the in-row
+weed distribution map obtained with this simple simulation, the
+three levels of treatment discussed above and a constant working
+speed of 6 km h1, the estimated consumption of LPG per unit surface
+area for precisely targeted flaming was 9.8 kg ha1. Thus, a
+maximum LPG saving of approximately 55% relative to the treatment
+of the entire surface is possible in this simulation. The estimated
+cost for site-specific flame weeding is approximately
+24 € ha1, whereas approximately 52 € ha1 are needed to perform
+a conventional broadcast treatment. Thus, the use of VRA flaming
+allows cost savings (28 € ha1) for LPG and, as a consequence,
+reduced CO2 emissions in this example.
+The preliminary evaluations conducted to verify the effectiveness
+of the machine to perform weed control in the intra-row
+space and the tolerance of maize plants to flaming confirmed the
+excellent weeding effect, in terms of the percentage of weed cover,
+of flaming performed both at low and high LPG pressures, as previously
+shown by previous experiments conducted at the University
+of Pisa (Peruzzi et al., 1996, 1998). The percentage of weed reduction
+ranged from 95% to 99% if flaming performed at both the early
+and late stages of the development of maize plants. In the interrow
+space, as expected, all the weeds were killed by the application
+of the mechanical treatment, again confirming the findings of previous
+experiments conducted at the University of Pisa (Peruzzi and
+Raffaelli, 2000; Raffaelli et al., 2005).
+Thus, a weed reduction greater than 90% was obtained in both
+the early-stage and late-stage physical treatments.
+The evaluation of maize tolerance to flaming showed that, a
+good and rapid recovery (requiring from 0 to 10 days) by the plants
+treated with the two LPG doses used with high and low weed covers
+was observed. This result again confirmed the findings of previous
+experiments, conducted at the University of Pisa, which
+also demonstrated that yield results were not affected by flaming
+(Peruzzi and Raffaelli, 2000).
+These results demonstrate that the field performance of the
+Physical Weed Control implement was very good, allowing a weed
+reduction of more than 90% without damaging crop plants. Accordingly,
+any negative influence on maize yield was avoided.
+Fig. 10. (a) Precision in the opening and closing of the herbicide spray valves; (b) Failure to open the valve to the nozzle at the edge of the treated area was a result of the
+previous partial treatment of the 0.5 m  0.5 m cells located on the border.
+Table 3
+Frequencies of the observed values of weed cover observed in a real maize field row
+divided into three ranges.
+Weed cover range (%) Observed frequency
+0 6 weed cover < 5 0.51
+5 6 weed cover < 25 0.32
+Weed coverP25 0.17
+Fig. 11. Representation of the in-row weed distribution map obtained with a
+simplified simulation based on weed cover.
+M. Pérez-Ruiz et al. / Computers and Electronics in Agriculture 110 (2015) 150–161 159
+4.4. Air-blast sprayer prototype
+An automatic air-blast sprayer that can be controlled remotely
+by an autonomous tractor (based on a prescribed tree diagram)
+or controlled by proximal sensors (based on the estimated canopy
+volume) to open, close and move the spray valves was successfully
+developed for a conventional tractor in the field and operated in a
+working olive orchard.
+The field tests performed during the design stage of the detection
+system were conducted in olive trees with canopy volumes
+ranging between 1 m3 and 20 m3 and at nominal speeds of 3.5
+and 5 km h1. The tests compared two types of commercial ultrasonic
+sensors (USs): a Banner model U-GAGE T30UINB US (range
+300–2000 mm) and a Banner model U-GAGE T30UXUA US (range
+100–1000 mm). To enable real-time detection in the four canopy
+bands, the ultrasonic pulse simultaneous mode was used. The measurements
+obtained using both sensors indicated several problems
+resulting from changes in the reflection of the signal caused by the
+low density and irregularity of the canopy and losses of the
+reflected waves. The main problem detected was a delay in the
+ultrasonic sensor response: the sensors were inactive for approximately
+2 s during the transition from canopy detection to no detection
+(out of operating range) to the next detection. Accordingly,
+modifications were performed in collaboration with the Banner
+company (the provider of the ultrasonic sensors). The new US configuration
+reduced the refresh time to 200 ms. The ultrasonic pulse
+simultaneous mode employed minimizes the response delay time
+but generates a greater risk that crosstalk will occur among the
+sensors. To solve this problem, the sensors were tilted at an angle
+of 5 to the perpendicular structure of the support. The data
+obtained show that the canopy volume estimated by these sensors
+was not highly accurate but was sufficiently satisfactory to achieve
+the desired goals. Preliminary trials were performed with a video
+analysis to assess the correspondence between target detection
+and spraying startup/shutdown at the beginning of each row, during
+operation along the row and at the end of each row. The results
+showed a precise system response to variation in the target features,
+approximately 0.1 m of accuracy and a rapid actuation,
+approximately 100 ms, of the management rules programmed in
+the LLAS (PLC device) for the management of the spraying and
+air flow rate adjustment. The data in Table 4 shows the mean values
+of the total savings in liquid application for the three tree rows.
+A comparison of these results shows that the savings produced
+during application using the improved air-blast sprayer were
+greater than 44% in all cases. The magnitude of the savings was
+quite similar to that observed in other research projects (Gil
+et al., 2007; Salyani et al., 2007).
+5. Conclusions
+The collaborative efforts in science and technology presented
+here show successful project development and preliminary results
+for new crop protection implements mounted on an autonomous
+tractor. This prototype system is focused on the design, development
+and testing of a new generation of automatic and robotic
+systems for effective pest management for both agriculture and
+forestry in both the chemical and physical (i.e., mechanical and
+thermal) domains. The following conclusions were drawn based
+on the results of this research:
+– This study demonstrated the feasibility of using accurate geopositioning
+information through RTK-GNSS for straight line on an
+autonomous tractor where extreme accuracy is required. The
+RMS errors of the location system were approximately 2.5 cm,
+with a mean close to zero.
+– The sprayer boom prototype could be used in precision agriculture
+to implement site-specific management techniques for variable-
+rate application of cereal production inputs using a mapbased
+prescription. A system that allows the mixing of water
+and herbicide during the treatment operation is essential to
+avoid disposal of the excess product following the treatment
+operation.
+– The study showed that it is possible to obtain an autonomously
+operating machine for the application of precision flaming. The
+preliminary experiments show the viability of the use of an
+autonomous tractor to carry different implements adapted to
+precision treatment. For example, a high-level decision-making
+system (HLDMS) on the tractor manages a spectrum of LPG
+working pressures according to the level of doses contained in
+a prescription map.
+– In compliance with the new trends defined by CAP 2014–2020
+and EU directive 128/2009 (limited and sustainable use of
+chemicals) and rule 1107/2009 (promotion of non-chemical
+methods), the VRA flaming machine allows the performance
+of sustainable Physical Weed Control, guaranteeing the protection
+of the environment, of human health and of food security.
+The key problem to be solved involves the lack of standardization
+of LPG tanks and the rules for their commercialization
+and refilling in the EU. There are no rules for LPG storage
+according to homologated provisions and no tax incentives
+for the use of LPG in agriculture. Thus, there is a clear need
+for political action to allow the definition of rules for the standardization
+of LPG bottles and storage. This field of political
+activity also clearly needs to acknowledge that in view of
+the environmentally friendly nature of the agricultural use of
+LPG, benefits should be considered for the farmers and the
+contractors using flaming, particularly VRA flaming, to perform
+weed control.
+– The prototype air-blast sprayer is ready to utilize map-based
+prescriptions and a data acquisition unit interfaced with an
+air-blast sprayer to produce a variable-rate spray application
+optimized to match the structural variation of the vegetation.
+The system provides savings of approximately 45% in applied
+spray volume. These savings, represented in terms of decreased
+applications of chemicals, will not only reduce the cost of spraying
+operations but also reduce the environmental impact
+caused by these chemicals.
+Acknowledgments
+This project is funded in part by the 7th Framework Programme
+of the European Union under Grant Agreement No. 245986. The
+authors also want to express recognition to the RHEA beneficiaries:
+CSIC (Spain), CogVis (Austria), FTW (Austria), Cyberbotics (Switzerland),
+University of Pisa (Italy), University Complutense of Madrid
+(Spain), Tropical (Greece), AGROSAP (Spain), Polytechnic University
+of Madrid (Spain), AirRobot (Germany), University of Florence
+(Italy), IRSTEA (France), CNH (Belgium), Bluebotics (Switzerland)
+and CM (Italy).
+Table 4
+Percent spray savings (conventional/optimized) in different trials.
+Trials Tree passes Conventional
+volume (L)
+Optimized
+volume (L)
+Percentage
+(%) saved
+Mean S.D. Mean S.D. Mean
+1 3 18.50 0.85 9.80 1.16 47.00
+2 3 18.90 1.80 10.20 1.44 46.03
+3 3 17.50 1.60 9.80 1.02 44.00
+4 3 18.50 1.85 9.90 0.81 46.48
+160 M. Pérez-Ruiz et al. / Computers and Electronics in Agriculture 110 (2015) 150–161
+References
+Bakker, T., van Asselt, K., Bontsema, J., Muller, J., van Straten, G., 2010. Systematic
+design of an autonomous platform for robotic weeding. J. Terrramech. 47, 63–
+73.
+Barberi, P., 2012. The EU framework directive on sustainable pesticide use:
+prospects for site-specific weed management. In: Proceedings of the first
+International Conference on Robotic and Associated High-Technologies and
+Equipment for Agriculture. September 19–21, Pisa, Italy.
+Carballido, J., Pérez-Ruiz, M., Gliever, C., Agüera, J., 2012. Design, development and
+lab evaluation of a weed control sprayer to be used in robotic systems. In:
+Proccedings of the first International Conference on Robotic and Associated
+High-Technologies and Equipment for Agriculture. September 19–21, Pisa, Italy.
+ECPA, 2008. European Crop Protection Association <www.ecpa.eu>.
+ECPA, 2011. European Crop Protection Association <http://www.ecpa.eu>.
+Emmi, L., Paredes-Madrid, L., Ribeiro, A., 2013. Fleets of robots for precision
+agriculture: a simulation environment. Ind. Robot: Int. J. 40 (1), 41–58.
+Gil, E., Escola, A., Rosell, J.R., Planas, S., Val, L., 2007. Variable rate application of plant
+protection products in vineyard using ultrasonics sensors. Crop Prot. 26, 1287–
+1297.
+Gil, E., Lorens, J., Llop, J., Fábregas, X., Escolá, A., Rosell-Polo, J.R., 2013. Variable rate
+sprayer. Part 2 – Vineyard prototype: design, implementation, and validation.
+Comput. Electron. Agric. 95, 136–150.
+Guerrero, J.M., Montalvo, M., Guijarro, M., Romeo, J., Pajares, G., 2014. Comparison
+of two new automatic techniques for exposure time control in agricultural
+images. In: Proceedings of the Second International Conference on Robotic and
+Associated High-Technologies and Equipment for Agriculture and Forestry. May
+21–23, Madrid, Spain.
+Gutjahr, C., Gerhards, R., 2010. Decision rules for site-specific weed management.
+In: Oerke, E.-C., Gerhards, R., Menz, G., Sikora, R.A. (Eds.), Precision Crop
+Protection-the Challenge and Use of Heterogeneity, Springer, Heidelberg, pp.
+223–239.
+Misra, P., Enge, P., 2006. Global Position Systems: Signals, Measurements and
+Performance, second ed. Ganga-Jamuna Press, Lincoln, MA, USA.
+Åstrand, B., Baerveldt, A., 2002. An agricultural mobile robot with vision-based
+perception for mechanical weed control. Auton. Robot. 13, 21–35.
+Peña, J.M., Torres-Sánchez, J., de Castro, A.I., Kelly, M., López-Granados, F., 2013.
+Weed mapping in early-season maize fields using object-based analysis of
+unmanned aerial vehicle (UAV) images. PLoS ONE 8 (10), e77151.
+Perez-Ruiz, M., Agüera, J., Gil, J.A., Slaughter, D.C., 2011. Optimization of
+agrochemical application in olive groves based on positioning sensor.
+Precision Agric. 12, 564–575.
+Perez-Ruiz, M., Slaughter, D.C., Gliever, C.J., Upadhyaya, S.K., 2012. Automatic GPSbased
+intra-row weed knife control system for transplanted row crops. Comput.
+Electron. Agric. 80, 41–49.
+Perez-Ruiz, M., Slaughter, D.C., Fathallah, F.A., Gliever, C.J., Miller, B.J., 2014. Corobotic
+intra-row weed control system. Biosyst. Eng. 126, 45–55.
+Peruzzi, A., Raffaelli, M., 2000. Experimental test of selective flame weeding for
+different spring summer crops in central Italy. Agric. Mediterr. 130 (2), 85–94.
+Peruzzi, A., Di Ciolo S., Raffaelli M., 1996. An experimental test bench for the study
+of flame weeding effects: first experimental results on rape plants (Sinapis alba
+L.). In: Proceedings of the AgEng ‘96 Conference, Madrid 23–26 September
+1996, paper 96-A-122.
+Peruzzi, A., Di Ciolo, S., Raffaelli, M., 1998. Effects of flaming on velvetleaf (Abutilon
+theophrasti L.) common amaranth (Amaranthus retroflexus) and cockspur grass
+(Echinocloa crus-galli L.). In: Proceedings AgEng ‘98 International Conference on
+Agricultural Engineering, Oslo 24/28 August, 1998, pp. 603–604.
+Peruzzi, A., Raffaelli, M., Frasconi, C., Fontanelli, M., Barberi, P., 2012. Influence of an
+injection system on the effect of activated soil steaming on Brassica juncea and
+the natural weed seedbank. Weed Res. 52, 140–152.
+Raffaelli, M., Barberi, P., Peruzzi, A., Ginanni, M., 2005. Mechanical weed control in
+maize: evaluation of weed harrowing and hoeing systems. Agric. Mediterr. 135
+(1), 33–43.
+Salyani, M., Muhammad, F., Sweeb, R.D., 2007. Mass Balance of Citrus Spray
+Applications. ASABE paper No. 071037, St. Joseph, MI 49085, USA.
+Scotford, I.M., Miller, P.C.H., 2005. Applications of spectral reflectance techniques in
+northern European cereal production: a review. Biosyst. Eng. 90, 235–250.
+SØgaard, H.T., Lund, I., 2007. Application accuracy of a machine vision-controlled
+robotic micro-dosing system. Biosyst. Eng. 96 (3), 315–322.
+Tewari, V.K., Kumar, A.A., Nare, B., Prakash, S., Tyagi, A., 2014. Microcontroller based
+roller contact type herbicide applicator for weed control under row crops.
+Comput. Electron. Agric. 104, 40–45.
+Tillett, N.D., Hague, T., Grundy, A.C., Dedousis, A.P., 2008. Mechanical within-row
+weed control for transplanted crops using computer vision. Biosyst. Eng. 99,
+171–178.
+Trimble Navigation Limited, 2007. Form 10-k Annual Report. Sunnyvale, California,
+USA.
+Walker, J.T., Bansal, R.K., 1999. Development and characterization of variable orifice
+nozzles for spraying agro-chemical. ASABE paper No. 99-1008. St. Joseph, MI
+49085, USA.
+Zhang, Y., Slaughter, D.C., 2011. Hyperspectral species mapping for automatic weed
+control in tomato under thermal environmental stress. Comput. Electron. Agric.
+77, 95–104.
+Zhang, Y., Staab, E.S., Slaughter, D.C., Giles, D.K., Downey, D., 2012. Automated weed
+control in organic row crops using hyperspectral species identification and
+thermal micro-dosing. Crop Prot. 41, 96–105.
+M. Pérez-Ruiz et al. / Computers and Electronics in Agriculture 110 (2015) 150–161 161
+</body>
+</html>

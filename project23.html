@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>COLLECTION OF PROJECTS</title>
+</head>
+<body>
+<table border="0" width="100%" bgcolor="skyblue" height="8%">
+<tr>
+<th width="20%"><font color="white" size="4"><a href="project123.html">PROJECT 1</a></font></th>
+<th width="20%"><font color="white" size="4"><a href="project23.html">PROJECT 2</a></font></th>
+<th width="20%"><font color="white" size="4"><a href="project24.html">PROJECT 3</a></font></th>
+<th width="20%"><font color="white" size="4"><a href="project25.html">PROJECT 4</a></font></th>
+</tr>
+</table>
+<form class = “search-form”>
+<input type = “text” placeholder = “search”>
+<button>search</button>
+</head>
+</form>
+</nav>
+<p>
+ A Review: Detection of Infected Leaves Using Image Processing Techniques Swapnil Lagad1 and Swapnili Karmore2 
+1Student, Department of CSE, G.H.R.C.E. Nagpur, India 2Assistant Professor, Department of CSE, G.H.R.C.E. Nagpur, India Abstract –Horticulture is the very essential and growing economic activity of all the times. Before industrial revolution, the huge number of human population depends only in agriculture. But now, agriculture in India is facing a structural change which leads to a critical situation. The one of the major problem present in the agriculture is arising attacks of pests in crops. Management of crops from early stage to mature harvest stage in horticulture includes identification and monitoring of plant diseases, controlled irrigation and controlled use of fertilizers and pesticides. Even if large number of remote sensing applications are developed but ground surveillance is still a problem. Due to absence of the experts and naked eyes surveillance is not able to give proper diagnosis of the crops many times. Hence farmers need a reliable system which can detect the infected crops. Instead of using complicated satellite solutions or getting help from helpdesk which are available on m-services it?s easy to use agrobot to survey farms, detect the diseases and automatically spraying of pesticides. The present study has given priority to early detection and diagnosis of the disease. Keywords-robot,image processing, image segmentation, agrobot, horticulture etc.
+</p>
+<p>
+ INTRODUCTION India is a country where more than 70 % of population relies on agriculture. Agriculture is the backbone of Indian economy. Our farmers works day and night to nourish our population that counts over 1.20 billion. In India, agriculture contributes about 16% of total GDP and 10% 
+of total exports. Over 60 % of India’s land area is cultivable making it the second largest country in terms of total cultivable land. Chemical pesticides are commonly used to cure the infected crop’s diseases.</p>
+<p>
+ But, excessive use of pesticides for curing plant disease treatment increases costs and raises the danger of remaining toxicants on agricultural crops. The skill of disease detecting in earlier stage is very vital so that timely cure and control of such disease leads to decreasing dissatisfactory solutions. Hence to overcome on this type of traditional agriculture highly tech equipment’s should be used. Advantages of automatic pesticide spraying: 
+• Avoids excessive amount of pesticide spraying. 
+• Avoids direct contact of farmer with pesticide. 
+• It gives the proper diagnosis of the disease properly to avoid naked eye diagnosis which is more time consuming and costly. 
+• Avoids farmers to travel to the farms, if they occur far from his place. 
+• Avoids workload of farmers. 
+</p>
+<p>
+LITERATURE SURVEY Murali Krishnan et al.[1]compared the k mean clustering algorithm with the fuzzy c clustering algorithm which is very and effective in determining the disease or infected area compared to it. 
+Vijay S.Bhong et al.[2] used the MATLAB software for differentiating the change in colours of leafs accurately. Firstly they used k-means clustering algorithm with Euclidean distance and for classification used neural e-ISSN: 2456-3463 International Journal of Innovations in Engineering and Science, Vol. 2, No.5, 2017 www.ijies.net 31 
+network. It is reliable method for detection of disease for cotton plants. Halil Durmus et al.[3] developed an autonomous mobile robot which can be able to move in agricultural plain fields, field rows or greenhouses. But due to unsuitable habitat they were unable to give justice to the Agrobot. Dr.S.R.Gengaje et al.[4] designed and developed arm based pesticide which was highly précised and highly speedy. They used zigbee module for wireless camera for video capturing but no image processing techniques mentioned in it. Abdulmunaf S.Byadgi et al.[5] in this paper detection of fungal disease symptoms of four variable crops such as vegetable, cereal, commercial and fruits is done using image processing techniques and neural network as a classifier. Sanjeev S Sannakki,Vijay S Rajpurohit at al.[6] proposed an image processing based grading system using Fuzzy logic.The system built on Machine vision and fuzzy logic is useful to pathologist and it is better than manual grading. Nikita Rishi at al.[7] in this paper various image processing techniques are used as such as nueral network, image segmentation, BP network, GRN network, fuzzy logic, SVM and many more are discussed in detail. Trupti S. Bodh et al.[8] in this paper Entropy based Segmentation for detecting the pests is used for colour images.Entropy based Segmentation gives faster results than FCM method. The results were obtained by calculating the each individual colours. METHOLOGY 
+A. Image acquisition : </P>
+
+<p>
+Images are taken from the camera which is having better resolution by keeping appropriate distance between camera and leaves.The digitization and storage of an image is referred as the image acquisition. After the image has been obtained, various methods of image processing can be applied on the image to get proper vision of image. 
+B. Image Pre-Processing : 
+</p>
+<p>
+After acquring the image the next step is of pre-processing .Pre-processing task involves some procedures to prepare the images enhancement. Pre-processing images commonly involves removing unwanted noise, normalizing the intensity of the individual images, removing reflections, and masking portions of images leaf image is in RGB colour format. The RGB image is converted to a grey scale image 
+Fig. 1- Block diagram 
+C. Image segmentation : 
+</p>
+<p>
+The image segmentation based on gray-level threshold segmentation is adapted and the binary image is obtained. The color image segmentation is more complex to process than gray image segmentation, because at the time of processing image, the color and result could be altered. Color image segmentation involves detection of edges or regions by deterministic procedure, based on information from intensity and/or spatial information. Thus first we convert RGB image into gray scale image and then after converting image thresholding and then band is separating is done. In band separting we observe three separate colour band image. Then we apply masking process for colour image segmentation. 
+</P>
+<p>
+D. Extraction : 
+
+There are colour models namely RGB, HIS, CMY. We are used RGB colour model for analysis. The RGB model is commonly used colour model, in which each sensor captures the intensity of the light in the respectively red (R), green (G) or blue (B) bands. In an RGB model basically Red, Green and Blue componentof the image sample is extracted. We also extract the total count of red, green and blue pixels in the e-ISSN: 2456-3463 International Journal of Innovations in Engineering and Science, Vol. 2, No.5, 2017 www.ijies.net 32 
+</p>
+<p>
+ 
+crops. We also extract the total count of pixels occupied by entire leaf, which gives the total area of leaves. After texture feature Extration Process is done. Then we convert the RGB model to HSV model. 
+E. Classification and Pesticide Spraying : 
+</p>
+<p>
+
+After coverting in HSV model on basis of hue values we can calculate the infected area of the leaf and spray the pescitide according on it. CONCLUSION The method so far implemented is effective and fast method in detection of disease on crops. It is easy r to be use it for early detection of crop’s disease through leaf inspection. The leaf images captured are processed to determine the healthiness of each crop. By using this recognition technique, it will identify the potential problems to the crops before its goes seriously damage whole field of crops. With this method, the use of harmful chemicals on plants can be reduced and hence ensure a healthier environment and may be even lowering the production cost of the maintenance and producing a high quality of crops. </p>
+
+<p>
+REFERENCES 
+[1] M. Krishnan and M. G. Sumithra, “A novel algorithm for detecting bacterial leaf scorch (BLS) of shade trees using image processing,” 2013 IEEE 11th Malaysia Int. Conf. Commun., no. November, pp. 474–478, 2013. 
+[2] V. S. Bhong and P. B. V Pawar, “Study and Analysis of Cotton Leaf Disease Detection Using Image Processing,” vol. 3, no. 2, pp. 1447–1454, 2016. 
+[3] H. Durmus, E. O. Gunes, M. Kirci, and B. B. Ustundag, “The design of general purpose autonomous agricultural mobile-robot: „AGROBOT,?” 2015 4th Int. Conf. Agro-Geoinformatics, Agro-Geoinformatics 2015, pp. 49–53, 2015. 
+[4] S. M. Deshmukh and W. I. T. Coe, “ARM- Based Pesticide Spraying Robot,” vol. 3, no. 3, pp. 398–402, 2015. [5] J. Pujari, R. Yakkundimath, and A. Byadgi, “Identification and Classification of Fungal disease Affected on Agriculture / Horticulture Crops using Image Processing Techniques,” IEEE Int. Conf. Comput. Intell. Comput. Res., vol. 978, no. 1, pp. 31–34, 2014. [6] S. S. Sannakki, V. S. Rajpurohit, V. B. Nargund, A. K. R., and P. S. Yallur, “Leaf Disease Grading by Machine Vision and Fuzzy Logic,” Int. J. Comput. Technol. Appl., vol. 2, no. 5, pp. 1709–1716, 2011. [7] N. Rishi and J. S. Gill, “An Overview on Detection and Classification of Plant Diseases in Image Processing,” vol. 3, no. 5, pp. 3–6, 2015. [8] T. S. Bodhe and P. Mukherji, “Selection of color space for image segmentation in pest detection,” 2013 Int. Conf. Adv. Technol. Eng. ICATE 2013,
+</p>
+<body>
+<html>
